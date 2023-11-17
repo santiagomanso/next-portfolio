@@ -2,7 +2,7 @@ import Navbar from './navbar'
 
 interface Props {
   children: React.ReactNode
-  border?: string
+  border?: boolean
   gap?: string
   justifyCenter?: string
   padding?: string
