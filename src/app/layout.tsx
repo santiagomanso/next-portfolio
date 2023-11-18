@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import AppContainer from '@/components/app-container'
-import Navbar from '@/components/navbar'
 
 import { Inconsolata, Inter, Roboto, Staatliches } from 'next/font/google'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { LanguageProvider } from '@/context/LanguageContext'
+import Navbar from '@/components/navbar/navbar'
 
 config.autoAddCss = false
 
