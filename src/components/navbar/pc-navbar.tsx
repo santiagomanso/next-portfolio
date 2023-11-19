@@ -14,14 +14,36 @@ export default function PcNavbar({
   language,
 }: Props) {
   return (
-    <div className='hidden lg:flex w-full justify-between  items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
+    <div className='hidden lg:flex w-full justify-between items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
       <div
-        className='flex items-center gap-1 cursor-pointer'
+        className={`flex items-center gap-1 cursor-pointer group transition-all ease-in-out duration-150 ${
+          location === navData.home.path
+            ? ''
+            : 'text-gray-700 dark:text-gray-500 dark:hover:text-white'
+        }`}
         onClick={() =>
           handleNavigation(navData.home.path, navData.home.externalHref)
         }
       >
-        {navData.home.icon} <p>{navData.home.label[language]}</p>
+        <div
+          className={`text-xl transition-all ease-in-out duration-150
+                ${
+                  location === navData.home.path
+                    ? 'text-gray-700 dark:text-white scale-105'
+                    : ''
+                }`}
+        >
+          {navData.home.icon}
+        </div>
+        <p
+          className={`${
+            location === navData.home.path
+              ? 'scale-105 text-gray-700 dark:text-white'
+              : ''
+          }`}
+        >
+          {navData.home.label[language]}
+        </p>
       </div>
       <ul className='flex items-center gap-16'>
         {navData.links.map((item) => {
@@ -30,22 +52,28 @@ export default function PcNavbar({
               onClick={() => handleNavigation(item.path, item.externalHref)}
               className={`${
                 location === item.path
-                  ? ' dark:text-gray-100 opacity-100 scale-110'
-                  : 'hover:-translate-y-1 hover:scale-105 text-gray-700 dark:text-secondary'
-              } cursor-pointer  flex items-baseline gap-1 translate-y-0  transition-all ease-out duration-300 groupo hover:text-black dark:hover:text-gray-100`}
+                  ? ' dark:text-white opacity-100 scale-110'
+                  : ' text-gray-700 dark:text-gray-500 dark:hover:text-white'
+              } cursor-pointer  flex items-baseline gap-1   transition-all ease-out duration-150 group  `}
               key={item.id}
             >
               <div
-                className={`text-xl 
+                className={`text-xl transition-all ease-in-out duration-150
                 ${
-                  location === item.path
-                    ? 'text-black dark:text-gray-100 '
-                    : 'group-hover:rotate-[-23deg] hover:text-black'
-                } transition-all ease-in-out duration-300 dark:hover:text-gray-100`}
+                  location === item.path ? 'text-gray-700 dark:text-white' : ''
+                } `}
               >
                 {item.icon && item.icon}
               </div>
-              <p className={`text-gray-500/80`}>{item.label[language]}</p>
+              <p
+                className={`${
+                  location === item.path
+                    ? 'scale-105 text-gray-700 dark:text-white'
+                    : ''
+                }`}
+              >
+                {item.label[language]}
+              </p>
             </li>
           )
         })}

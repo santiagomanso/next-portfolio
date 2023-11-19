@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
   return (
     <div
       ref={menuRef}
-      className='rounded-md cursor-pointer z-50'
+      className='rounded-md z-50'
       onClick={() => setOpen(!open)}
     >
       <div className='flex relative items-center justify-start gap-2 duration-200  rounded-md px-2'>
@@ -55,14 +55,14 @@ const LanguageSwitcher = () => {
       <ul
         className={`fixed duration-100 ${
           open ? ' scale-100' : 'scale-0'
-        } bg-gradient-to-br  to-slate-600 from-gray-300 dark:from-slate-800 dark:to-neutral-800 capitalize  flex flex-col  gap-2 rounded-md overflow-hidden z-[999] mt-1 w-[150px]  cursor-default p-2`}
+        } bg-gradient-to-br  to-slate-600 from-gray-300 dark:from-slate-800 dark:to-neutral-800 capitalize  flex flex-col  gap-2 rounded-md overflow-hidden z-[999] mt-1 w-[150px] p-2`}
       >
         {Countries.map((country) => {
           return (
             <li
               key={country.id}
               onClick={() => handleClick(country)}
-              className='gap-2 flex items-center justify-start hover:bg-gray-300 dark:hover:bg-zinc-900 hover:translate-x-1 duration-200  p-3 z-50 rounded w-full cursor-pointer'
+              className='gap-2 flex items-center justify-start hover:bg-gray-300 dark:hover:bg-zinc-900 hover:translate-x-1 duration-200  p-3 z-50 rounded w-full hover:cursor-pointer'
             >
               {/* eslint-disable-next-line */}
               <img

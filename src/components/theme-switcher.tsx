@@ -11,7 +11,7 @@ const ThemeSwitcher = ({ setOpen }: Props) => {
   const [isSelected, setIsSelected] = useState('dark')
   const handleSelect = () => {
     if (setOpen) {
-      setOpen(false)
+      //setOpen(false)
     }
     isSelected === 'dark' ? setIsSelected('light') : setIsSelected('dark')
   }
@@ -23,19 +23,16 @@ const ThemeSwitcher = ({ setOpen }: Props) => {
   }, [isSelected])
 
   return (
-    <div
-      onClick={handleSelect}
-      className='flex transition-colors cursor-pointer rounded-full'
-    >
+    <div onClick={handleSelect} className='flex transition-colors rounded-full'>
       <div
         className={`${
           isSelected === 'dark' ? 'translate-x-full ' : 'translate-x-0 '
         } transition-all ease-in-out duration-300 flex justify-center items-center`}
       >
         {isSelected === 'dark' ? (
-          <FontAwesomeIcon icon={faSun} className={`text-xl`} />
+          <FontAwesomeIcon icon={faSun} className={`text-xl cursor-pointer`} />
         ) : (
-          <FontAwesomeIcon icon={faMoon} className={`text-xl`} />
+          <FontAwesomeIcon icon={faMoon} className={`text-xl cursor-pointer`} />
         )}
       </div>
     </div>
