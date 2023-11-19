@@ -32,7 +32,7 @@ export default function MobileNavbar({
   )
 
   const handleClick = (path: string | boolean, externalHref: boolean) => {
-    setIsOpen(!isOpen)
+    setIsOpen(false)
     handleNavigation(path, externalHref)
   }
 
@@ -51,7 +51,7 @@ export default function MobileNavbar({
       <aside
         className={`${
           isOpen ? 'translate-x-0' : ' translate-x-full'
-        } bg-gradient-to-br from-gray-400 to-zinc-900 w-full md:w-3/5 h-screen fixed top-0 right-0 z-50 select-none ease-in-out duration-300`}
+        } bg-gradient-to-br from-gray-400 to-zinc-900 dark:from-neutral-900 dark:to-zinc-900 w-full md:w-3/5 h-screen fixed top-0 right-0 z-50 select-none ease-in-out duration-300`}
       >
         <article className={`text-secondary`}>
           <div className='flex justify-between items-center px-6 mt-2'>
@@ -60,7 +60,7 @@ export default function MobileNavbar({
             <LanguageSwitcher />
 
             {/* CLOSE aside button */}
-            <button onClick={() => setIsOpen(!isOpen)}>
+            <button onClick={() => setIsOpen(false)}>
               <FontAwesomeIcon
                 icon={faXmark}
                 className='text-3xl sm:text-4xl'
@@ -71,7 +71,7 @@ export default function MobileNavbar({
             <li
               className='px-5 flex justify-between items-center group'
               onClick={() =>
-                handleNavigation(navData.home.path, navData.home.externalHref)
+                handleClick(navData.home.path, navData.home.externalHref)
               }
             >
               {navData.home.icon} {navData.home.label[language]}{' '}

@@ -54,7 +54,7 @@ export const navData: NavDataI = {
     },
     {
       id: 4,
-      label: { es: 'portafolio', de: 'starteseite', en: 'portfolio' },
+      label: { es: 'portafolio', de: 'portfolio', en: 'portfolio' },
       path: '/portfolio',
       icon: <FontAwesomeIcon icon={faBriefcase} />,
       externalHref: false,
