@@ -23,10 +23,7 @@ const ThemeSwitcher = ({ setOpen }: Props) => {
   }, [isSelected])
 
   return (
-    <div
-      onClick={handleSelect}
-      className='flex transition-colors rounded-full w-[30px] bg-indigo-600'
-    >
+    <div onClick={handleSelect} className='flex transition-colors rounded-full'>
       <div
         className={`${
           isSelected === 'dark' ? 'translate-x-full ' : 'translate-x-0 '
