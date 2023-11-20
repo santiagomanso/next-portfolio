@@ -5,10 +5,10 @@ import ResponsiveLanguageSwitcher from './components/responsive-language-switche
 export default function ResponsiveIntroHome() {
   return (
     <section className='lg:hidden h-full w-full grid grid-cols-3 grid-rows-12 gap-2 overflow-auto'>
-      <article className='rounded-lg bg-purple-600/40 col-span-3 row-span-3 flex flex-col justify-center'>
+      <article className='rounded-lg bg-purple-500/20 col-span-3 row-span-3 flex flex-col justify-center'>
         <ResponsiveHeaderTypewritter />
       </article>
-      <article className='rounded-lg bg-purple-600/40'>
+      <article className='rounded-lg bg-purple-500/20'>
         <ResponsiveLanguageSwitcher />
       </article>
       <article className='rounded-lg bg-sky-500 col-span-2'>3</article>

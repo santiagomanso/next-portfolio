@@ -19,12 +19,12 @@ export default function ResponsiveLanguageSwitcher() {
       className='flex flex-col text-center justify-center w-full h-full font-secondary'
       onClick={handleClick}
     >
-      <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-4xl'>
+      <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-5xl'>
         {language}
       </h1>
-      <div className='flex justify-center text-center text-xl gap-2 w-full pr-1'>
-        <p className={`${language === 'es' ? 'text-violet-300' : ''}`}>es</p>{' '}
-        <p className={`${language === 'en' ? 'text-violet-500' : ''}`}>en</p>
+      <div className='flex justify-center text-center text-lg gap-2 w-full pr-1 tracking-wider'>
+        <p className={`${language === 'es' ? 'text-purple-400' : ''}`}>es</p>{' '}
+        <p className={`${language === 'en' ? 'text-purple-400' : ''}`}>en</p>
       </div>
     </div>
   )
