@@ -11,7 +11,7 @@ export default function Home() {
   const { language } = useContext(LanguageContext)
 
   return (
-    <Container border justifyCenter>
+    <Container border justifyCenter padding='p-2 lg:px-5 lg:py-4'>
       <PcIntroHome />
       <ResponsiveIntroHome />
     </Container>
