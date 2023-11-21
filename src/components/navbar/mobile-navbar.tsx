@@ -37,7 +37,10 @@ export default function MobileNavbar({
   }
 
   return (
-    <div className='lg:hidden' ref={menuRef}>
+    <div
+      className={`${location === '/' ? 'hidden' : ''} lg:hidden`}
+      ref={menuRef}
+    >
       {/* OPEN aside button */}
       <button
         onClick={() => setIsOpen(true)}

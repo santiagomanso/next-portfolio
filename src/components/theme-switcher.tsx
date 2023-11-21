@@ -5,9 +5,10 @@ import React, { SetStateAction, useEffect, useState } from 'react'
 
 interface Props {
   setOpen?: React.Dispatch<SetStateAction<boolean>>
+  isResponsive?: boolean
 }
 
-const ThemeSwitcher = ({ setOpen }: Props) => {
+const ThemeSwitcher = ({ setOpen, isResponsive }: Props) => {
   const [isSelected, setIsSelected] = useState('dark')
   const handleSelect = () => {
     if (setOpen) {
@@ -23,16 +24,26 @@ const ThemeSwitcher = ({ setOpen }: Props) => {
   }, [isSelected])
 
   return (
-    <div onClick={handleSelect} className='flex transition-colors rounded-full'>
+    <div
+      onClick={handleSelect}
+      className={`flex transition-colors rounded-full ${
+        isResponsive
+          ? 'bg-gradient-to-br from-slate-800 to-blue-800 dark:from-green-500 dark:to-teal-900 border h-[25px] px-2 border-sky-100 dark:border-green-300 w-[64px]'
+          : ''
+      }`}
+    >
       <div
-        className={`${
-          isSelected === 'dark' ? 'translate-x-full ' : 'translate-x-0 '
-        } transition-all ease-in-out duration-300 flex justify-center items-center`}
+        className={`transition-all ease-in-out duration-300 flex justify-center items-center ${
+          isSelected === 'dark' ? 'translate-x-[32px] ' : 'translate-x-0 '
+        } `}
       >
         {isSelected === 'dark' ? (
-          <FontAwesomeIcon icon={faSun} className={`text-xl cursor-pointer`} />
+          <FontAwesomeIcon
+            icon={faSun}
+            className={`text-lg cursor-pointer ${isResponsive ? '' : ''}`}
+          />
         ) : (
-          <FontAwesomeIcon icon={faMoon} className={`text-xl cursor-pointer`} />
+          <FontAwesomeIcon icon={faMoon} className={`text-lg cursor-pointer`} />
         )}
       </div>
     </div>

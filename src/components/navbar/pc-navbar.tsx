@@ -14,7 +14,7 @@ export default function PcNavbar({
   language,
 }: Props) {
   return (
-    <div className='hidden animate-fade animate-duration-300 animate-ease-in-out animate-delay-200 lg:flex w-full justify-between items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
+    <div className='hidden lg:flex w-full justify-between items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
       <div
         className={`flex items-center gap-1 cursor-pointer group transition-all ease-in-out duration-150 ${
           location === navData.home.path
