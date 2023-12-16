@@ -35,11 +35,11 @@ export default function YearsOfExperience() {
   const { language } = useContext(LanguageContext)
 
   return (
-    <div className='flex flex-col text-center justify-center items-center gap-0 h-full font-secondary'>
+    <div className='flex flex-col text-center justify-center items-center gap-0 h-full '>
       <h2 className='text-2xl  text-gray-700 dark:text-white'>
         {text.years[language]}
       </h2>
-      <p className='text-[13px] tracking-widest font-secondary text-gray-700 dark:text-white'>
+      <p className='text-[13px] tracking-widest  text-gray-700 dark:text-white'>
         {text.experience[language]}
       </p>
     </div>

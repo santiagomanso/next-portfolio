@@ -6,9 +6,10 @@ import React, { SetStateAction, useEffect, useState } from 'react'
 interface Props {
   setOpen?: React.Dispatch<SetStateAction<boolean>>
   isResponsive?: boolean
+  isClicked?: boolean
 }
 
-const ThemeSwitcher = ({ setOpen, isResponsive }: Props) => {
+const ThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
   const [isSelected, setIsSelected] = useState('dark')
   const handleSelect = () => {
     if (setOpen) {
@@ -19,9 +20,18 @@ const ThemeSwitcher = ({ setOpen, isResponsive }: Props) => {
 
   useEffect(() => {
     isSelected === 'dark'
-      ? document.documentElement.classList.add('dark')
-      : document.documentElement.classList.remove('dark')
+      ? (document.documentElement.classList.add('dark'), setIsSelected('dark'))
+      : (document.documentElement.classList.remove('dark'),
+        setIsSelected('light'))
   }, [isSelected])
+
+  useEffect(() => {
+    if (isClicked) {
+      setIsSelected('dark')
+    } else {
+      setIsSelected('light')
+    }
+  }, [isClicked])
 
   return (
     <div

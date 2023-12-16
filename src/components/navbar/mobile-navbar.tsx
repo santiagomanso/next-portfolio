@@ -70,7 +70,7 @@ export default function MobileNavbar({
               />
             </button>
           </div>
-          <ul className='flex flex-col gap-12 pt-10 px-2 text-2xl tracking-wider sm:text-4xl font-secondary'>
+          <ul className='flex flex-col gap-12 pt-10 px-2 text-2xl tracking-wider sm:text-4xl'>
             <li
               className='px-5 flex justify-between items-center group'
               onClick={() =>
