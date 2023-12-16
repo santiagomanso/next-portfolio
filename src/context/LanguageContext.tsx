@@ -1,6 +1,6 @@
 'use client'
 import { Dispatch, SetStateAction, createContext, useState } from 'react'
-import { Dictionary } from '@/settings/dictionary'
+import { Dictionary, DictionaryI } from '@/settings/dictionary'
 
 interface ContextI {
   language: string
@@ -8,6 +8,8 @@ interface ContextI {
   setLanguage: Dispatch<SetStateAction<string>>
   setFlag: Dispatch<SetStateAction<string>>
   changeLanguage: (language: string, flag: string) => void
+  dictionary: DictionaryI[string]
+  setDictionary: Dispatch<SetStateAction<DictionaryI[string]>>
 }
 
 const initialContext: ContextI = {
@@ -17,6 +19,8 @@ const initialContext: ContextI = {
   setFlag: () => console.log('not initialized'),
   changeLanguage: (language: string, flag: string) =>
     console.log('not initialized'),
+  dictionary: Dictionary.es,
+  setDictionary: () => console.log('not initialized'),
 }
 
 export const LanguageContext = createContext<ContextI>(initialContext)
@@ -28,23 +32,29 @@ export const LanguageProvider = ({
 }) => {
   const [language, setLanguage] = useState(initialContext.language)
   const [flag, setFlag] = useState(initialContext.flag)
-  const [dictionary, setDictionary] = useState(Dictionary.es)
+  const [dictionary, setDictionary] = useState<DictionaryI[string]>(
+    Dictionary.es,
+  )
 
   const changeLanguage = (language: string, flag: string) => {
-    console.log('INCOMING language => ', language)
     setLanguage(language)
     setFlag(flag)
-    setDictionary(Dictionary[language])
+    setDictionary((prevDictionary) => ({
+      ...prevDictionary,
+      ...Dictionary[language],
+    }))
   }
 
-  const data = {
+  const data: ContextI = {
     language,
     flag,
     dictionary,
     setLanguage,
     setFlag,
     changeLanguage,
+    setDictionary,
   }
+
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>
   )

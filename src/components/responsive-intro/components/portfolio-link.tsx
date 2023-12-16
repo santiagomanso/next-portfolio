@@ -24,10 +24,10 @@ export default function PortfolioLink() {
 
   return (
     <div className='flex flex-col justify-center text-center items-center h-full'>
-      <h2 className='font-secondary text-3xl tracking-wider text-gray-700 dark:text-white'>
+      <h2 className=' text-3xl tracking-wider text-gray-700 dark:text-white'>
         {text.portfolio[language]}
       </h2>
-      <p className='font-secondary tracking-widest text-[13px] text-gray-700 dark:text-white'>
+      <p className=' tracking-widest text-[13px] text-gray-700 dark:text-white'>
         {text.allMyWork[language]}
       </p>
     </div>

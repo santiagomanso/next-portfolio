@@ -1,30 +1,51 @@
 import { LanguageContext } from '@/context/LanguageContext'
 import { Countries } from '@/settings/countries'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 export default function ResponsiveLanguageSwitcher() {
   const { language, changeLanguage } = useContext(LanguageContext)
 
+  const [selected, setSelected] = useState(0)
   const handleClick = () => {
-    let lang: string
-    let flag: string
-    language === 'es'
-      ? ((lang = 'en'), (flag = Countries[0].flag))
-      : ((lang = 'es'), (flag = Countries[2].flag))
-    changeLanguage(lang, flag)
+    if (selected >= 2) {
+      setSelected((prev) => prev - 2)
+    } else {
+      setSelected((prev) => prev + 1)
+    }
+
+    changeLanguage(Countries[selected].language, Countries[selected].flag)
   }
 
   return (
     <div
-      className='flex flex-col text-center justify-center w-full h-full font-secondary'
+      className='flex flex-col text-center justify-center w-full h-full '
       onClick={handleClick}
     >
       <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-5xl'>
         {language}
       </h1>
       <div className='flex justify-center text-center text-lg gap-2 w-full pr-1 tracking-wider'>
-        <p className={`${language === 'es' ? 'text-purple-400' : ''}`}>es</p>{' '}
-        <p className={`${language === 'en' ? 'text-purple-400' : ''}`}>en</p>
+        <p
+          className={`${
+            language === 'es' ? 'text-purple-500' : 'text-gray-700'
+          }`}
+        >
+          es
+        </p>
+        <p
+          className={`${
+            language === 'en' ? 'text-purple-500' : 'text-gray-700'
+          }`}
+        >
+          en
+        </p>
+        <p
+          className={`${
+            language === 'de' ? 'text-purple-500' : 'text-gray-700'
+          }`}
+        >
+          de
+        </p>
       </div>
     </div>
   )

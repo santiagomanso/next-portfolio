@@ -1,4 +1,4 @@
-import { Inconsolata, Inter, Roboto_Mono } from 'next/font/google'
+import { Inconsolata, Inter, Staatliches } from 'next/font/google'
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -6,14 +6,16 @@ export const inter = Inter({
   variable: '--font-inter',
 })
 
-export const roboto_mono = Roboto_Mono({
+export const staatliches = Staatliches({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  weight: '400',
+  variable: '--font-Staatliches',
 })
 
 export const inconsolata = Inconsolata({
   subsets: ['latin'],
   display: 'swap',
+  weight: '400',
   variable: '--font-inconsolata',
 })
