@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './../../globals.css'
+import './globals.css'
 import AppContainer from '@/components/app-container'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
