@@ -14,7 +14,7 @@ export default function PcNavbar({
   language,
 }: Props) {
   return (
-    <div className='hidden lg:flex w-full justify-between items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
+    <div className='hidden lg:flex w-full justify-between items-center gap-5 tracking-wider  font-primary'>
       <div
         className={`flex items-center gap-1 cursor-pointer group transition-all ease-in-out duration-150 ${
           location === navData.home.path
@@ -58,12 +58,17 @@ export default function PcNavbar({
               key={item.id}
             >
               <div
-                className={`text-xl transition-all ease-in-out duration-150
-                ${
-                  location === item.path ? 'text-gray-700 dark:text-white' : ''
-                } `}
+                className={`text-xl transition-all ease-in-out duration-150`}
               >
-                {item.icon && item.icon}
+                <div
+                  className={` dark:text-gray-400 ${
+                    location === item.path
+                      ? 'text-gray-700 dark:text-white'
+                      : ''
+                  }`}
+                >
+                  {item.icon && item.icon}
+                </div>
               </div>
               <p
                 className={`${
