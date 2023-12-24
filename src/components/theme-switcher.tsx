@@ -50,10 +50,15 @@ const ThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
         {isSelected === 'dark' ? (
           <FontAwesomeIcon
             icon={faSun}
-            className={`text-lg cursor-pointer ${isResponsive ? '' : ''}`}
+            className={`text-lg cursor-pointer text-zinc-700  dark:text-gray-500 ${
+              isResponsive ? '' : ''
+            }`}
           />
         ) : (
-          <FontAwesomeIcon icon={faMoon} className={`text-lg cursor-pointer`} />
+          <FontAwesomeIcon
+            icon={faMoon}
+            className={`text-lg cursor-pointer text-zinc-700  dark:text-gray-500`}
+          />
         )}
       </div>
     </div>

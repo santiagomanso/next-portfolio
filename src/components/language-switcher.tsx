@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
   return (
     <div
       ref={menuRef}
-      className='rounded-md z-50'
+      className='rounded-md z-50 group'
       onClick={() => setOpen(!open)}
     >
       <div className='flex relative items-center justify-start gap-2 duration-200  rounded-md px-2'>
@@ -50,7 +50,9 @@ const LanguageSwitcher = () => {
           alt={language}
           className='w-[32px] max-w-[80px] h-[30px]'
         />
-        <span>{language}</span>
+        <span className='text-zinc-700 dark:group-hover:text-white dark:text-gray-500'>
+          {language}
+        </span>
       </div>
       <ul
         className={`fixed duration-100 ${
