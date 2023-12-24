@@ -50,14 +50,20 @@ const ThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
         {isSelected === 'dark' ? (
           <FontAwesomeIcon
             icon={faSun}
-            className={`text-lg cursor-pointer text-zinc-700  dark:text-gray-500 ${
-              isResponsive ? '' : ''
+            className={`text-lg cursor-pointer  ${
+              isResponsive
+                ? 'text-white'
+                : 'text-zinc-700 dark:hover:text-yellow-500 dark:text-gray-500 hover:text-purple-600'
             }`}
           />
         ) : (
           <FontAwesomeIcon
             icon={faMoon}
-            className={`text-lg cursor-pointer text-zinc-700  dark:text-gray-500`}
+            className={`text-lg cursor-pointer ${
+              isResponsive
+                ? 'text-white'
+                : 'text-zinc-700 hover:text-purple-600'
+            } dark:text-gray-500`}
           />
         )}
       </div>

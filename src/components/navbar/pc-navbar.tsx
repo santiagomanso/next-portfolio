@@ -24,20 +24,19 @@ export default function PcNavbar({
         }
       >
         <div
-          className={`text-xl transition-all ease-in-out duration-150
-                ${
-                  location === navData.home.path
-                    ? 'text-zinc-700  dark:text-white '
-                    : 'text-zinc-700 dark:group-hover:text-white dark:text-gray-500'
-                }`}
+          className={`text-xl transition-all ease-out duration-150 group ${
+            location === navData.home.path
+              ? 'text-slate-500  dark:text-white'
+              : 'text-slate-500 dark:text-gray-500 group-hover group-hover:-rotate-[9deg] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-125 dark:group-hover:text-white'
+          }`}
         >
           {navData.home.icon}
         </div>
         <p
-          className={`${
+          className={`transition-all ease-out duration-150 group   ${
             location === navData.home.path
               ? ' text-zinc-700  dark:text-white'
-              : 'text-zinc-700 dark:group-hover:text-white dark:text-gray-500'
+              : 'text-zinc-700 group-hover:-translate-y-1 dark:text-gray-500 dark:group-hover:text-white'
           }`}
         >
           {navData.home.label[language]}
@@ -49,9 +48,9 @@ export default function PcNavbar({
           return (
             <li
               onClick={() => handleNavigation(item.path, item.externalHref)}
-              className={`transition-all ease-in-out duration-150  group ${
+              className={`transition-all ease-out duration-150 group ${
                 location === item.path ? '  ' : '  '
-              } cursor-pointer  flex items-baseline gap-1   transition-all ease-out duration-150 group  `}
+              } cursor-pointer  flex items-baseline gap-1    `}
               key={item.id}
             >
               <div
@@ -59,7 +58,7 @@ export default function PcNavbar({
                   location === item.path
                     ? 'text-slate-500 dark:text-white -rotate-[9deg] -translate-x-1 -translate-y-1 scale-125'
                     : item.path &&
-                      'text-slate-500 dark:text-gray-500  group-hover:-rotate-[9deg] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-125'
+                      'text-slate-500 dark:text-gray-500  group-hover:-rotate-[9deg] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-125 dark:group-hover:text-white'
                 }`}
               >
                 {item.icon && item.icon}
@@ -70,7 +69,7 @@ export default function PcNavbar({
                   location === item.path
                     ? 'text-slate-800 dark:text-white  -translate-y-1'
                     : item.path &&
-                      'text-zinc-700 group-hover:-translate-y-1 dark:text-gray-500'
+                      'text-zinc-700 group-hover:-translate-y-1 dark:text-gray-500 dark:group-hover:text-white'
                 }`}
               >
                 {item.label[language]}
