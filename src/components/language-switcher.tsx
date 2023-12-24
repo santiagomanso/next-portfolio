@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
   return (
     <div
       ref={menuRef}
-      className='rounded-md z-50'
+      className='rounded-md z-50 group'
       onClick={() => setOpen(!open)}
     >
       <div className='flex relative items-center justify-start gap-2 duration-200  rounded-md px-2'>
@@ -50,19 +50,21 @@ const LanguageSwitcher = () => {
           alt={language}
           className='w-[32px] max-w-[80px] h-[30px]'
         />
-        <span>{language}</span>
+        <span className='text-zinc-700 dark:group-hover:text-white dark:text-gray-500'>
+          {language}
+        </span>
       </div>
       <ul
         className={`fixed duration-100 ${
           open ? ' scale-100' : 'scale-0'
-        } bg-gradient-to-br  to-slate-600 from-gray-300 dark:from-slate-800 dark:to-neutral-800 capitalize  flex flex-col  gap-2 rounded-md overflow-hidden z-[999] mt-1 w-[150px] p-2`}
+        } bg-gradient-to-br  from-white via-gray-200 to-gray-400 dark:from-slate-800 dark:to-neutral-800 capitalize  flex flex-col  gap-2 rounded-sm border dark:border-zinc-600/80 border-zinc-400/60 overflow-hidden z-[999] mt-1 w-[150px] p-2`}
       >
         {Countries.map((country) => {
           return (
             <li
               key={country.id}
               onClick={() => handleClick(country)}
-              className='gap-2 flex items-center justify-start hover:bg-gray-300 dark:hover:bg-zinc-900 hover:translate-x-1 duration-200  p-3 z-50 rounded w-full hover:cursor-pointer'
+              className='gap-2 flex items-center justify-start hover:bg-gray-300 dark:hover:border-zinc-500 hover:border-slate-400 dark:hover:bg-slate-700 hover:translate-x-1 duration-200 border p-3 z-50 w-full hover:cursor-pointer group'
             >
               {/* eslint-disable-next-line */}
               <img
@@ -70,7 +72,7 @@ const LanguageSwitcher = () => {
                 alt={country.name[language]}
                 className='w-[40px] max-w-[80px] h-[40px]'
               />
-              <span className=''>{country.name[language]}</span>
+              <span className='tracking-widest'>{country.name[language]}</span>
             </li>
           )
         })}

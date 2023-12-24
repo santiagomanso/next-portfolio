@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import Modal from './modal'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWrench } from '@fortawesome/free-solid-svg-icons'
 
 export default function SkillsSection() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleCLick = () => {
     setIsOpen(true)

@@ -14,32 +14,29 @@ export default function PcNavbar({
   language,
 }: Props) {
   return (
-    <div className='hidden lg:flex w-full justify-between items-center gap-5 font-secondary text-gray-700 dark:text-slate-300'>
+    <div className='hidden lg:flex w-full justify-between items-center gap-5 tracking-wider  font-primary'>
       <div
         className={`flex items-center gap-1 cursor-pointer group transition-all ease-in-out duration-150 ${
-          location === navData.home.path
-            ? ''
-            : 'text-gray-700 dark:text-gray-500 dark:hover:text-white'
+          location === navData.home.path ? '' : ''
         }`}
         onClick={() =>
           handleNavigation(navData.home.path, navData.home.externalHref)
         }
       >
         <div
-          className={`text-xl transition-all ease-in-out duration-150
-                ${
-                  location === navData.home.path
-                    ? 'text-gray-700 dark:text-white scale-105'
-                    : ''
-                }`}
+          className={`text-xl transition-all ease-out duration-150 group ${
+            location === navData.home.path
+              ? 'text-slate-500  dark:text-white'
+              : 'text-slate-500 dark:text-gray-500 group-hover group-hover:-rotate-[9deg] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-125 dark:group-hover:text-white'
+          }`}
         >
           {navData.home.icon}
         </div>
         <p
-          className={`${
+          className={`transition-all ease-out duration-150 group   ${
             location === navData.home.path
-              ? 'scale-105 text-gray-700 dark:text-white'
-              : ''
+              ? ' text-zinc-700  dark:text-white'
+              : 'text-zinc-700 group-hover:-translate-y-1 dark:text-gray-500 dark:group-hover:text-white'
           }`}
         >
           {navData.home.label[language]}
@@ -47,29 +44,32 @@ export default function PcNavbar({
       </div>
       <ul className='flex items-center gap-16'>
         {navData.links.map((item) => {
+          console.log('item', typeof item)
           return (
             <li
               onClick={() => handleNavigation(item.path, item.externalHref)}
-              className={`${
-                location === item.path
-                  ? ' dark:text-white opacity-100 scale-110'
-                  : ' text-gray-700 dark:text-gray-500 dark:hover:text-white'
-              } cursor-pointer  flex items-baseline gap-1   transition-all ease-out duration-150 group  `}
+              className={`transition-all ease-out duration-150 group ${
+                location === item.path ? '  ' : '  '
+              } cursor-pointer  flex items-baseline gap-1    `}
               key={item.id}
             >
               <div
-                className={`text-xl transition-all ease-in-out duration-150
-                ${
-                  location === item.path ? 'text-gray-700 dark:text-white' : ''
-                } `}
+                className={`transition-all duration-150 ${
+                  location === item.path
+                    ? 'text-slate-500 dark:text-white -rotate-[9deg] -translate-x-1 -translate-y-1 scale-125'
+                    : item.path &&
+                      'text-slate-500 dark:text-gray-500  group-hover:-rotate-[9deg] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-125 dark:group-hover:text-white'
+                }`}
               >
                 {item.icon && item.icon}
               </div>
+
               <p
-                className={`${
+                className={`transition-all duration-150 ${
                   location === item.path
-                    ? 'scale-105 text-gray-700 dark:text-white'
-                    : ''
+                    ? 'text-slate-800 dark:text-white  -translate-y-1'
+                    : item.path &&
+                      'text-zinc-700 group-hover:-translate-y-1 dark:text-gray-500 dark:group-hover:text-white'
                 }`}
               >
                 {item.label[language]}
