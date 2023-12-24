@@ -1,13 +1,10 @@
 import Link from 'next/link'
-import LanguageSwitcher from '../language-switcher'
 import ResponsiveHeaderTypewritter from './components/header-typewritter'
-import MyExperience from './components/portfolio-link'
 import ResponsiveLanguageSwitcher from './components/responsive-language-switcher'
 import PortfolioLink from './components/portfolio-link'
 import YearsOfExperience from './components/experience-years'
 import ThemeSwitcher from '../theme-switcher'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import SkillsSection from './components/skills'
 import { useState } from 'react'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
@@ -17,7 +14,7 @@ export default function ResponsiveIntroHome() {
   const [isClicked, setIsClicked] = useState(false)
   return (
     <section className='lg:hidden h-full w-full grid grid-cols-3 grid-rows-12 gap-2 overflow-auto font-primary sm:max-w-2xl'>
-      <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  col-span-3 row-span-3 flex flex-col justify-center'>
+      <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  col-span-3 row-span-2 flex flex-col justify-center'>
         <ResponsiveHeaderTypewritter />
       </article>
       <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg '>
