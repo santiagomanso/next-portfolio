@@ -27,21 +27,27 @@ export default function ResponsiveLanguageSwitcher() {
       <div className='flex justify-center text-center text-lg gap-2 w-full pr-1 tracking-wider'>
         <p
           className={`${
-            language === 'es' ? 'text-purple-500' : 'text-gray-700'
+            language === 'es'
+              ? 'text-purple-500'
+              : 'text-gray-700 dark:text-white'
           }`}
         >
           es
         </p>
         <p
           className={`${
-            language === 'en' ? 'text-purple-500' : 'text-gray-700'
+            language === 'en'
+              ? 'text-purple-500'
+              : 'text-gray-700 dark:text-white'
           }`}
         >
           en
         </p>
         <p
           className={`${
-            language === 'de' ? 'text-purple-500' : 'text-gray-700'
+            language === 'de'
+              ? 'text-purple-500'
+              : 'text-gray-700 dark:text-white'
           }`}
         >
           de
