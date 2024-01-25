@@ -49,7 +49,7 @@ export default function PcNavbar({
             <li
               onClick={() => handleNavigation(item.path, item.externalHref)}
               className={`transition-all ease-out duration-150 group ${
-                location === item.path ? '  ' : '  '
+                location === item.path ? '' : ''
               } cursor-pointer  flex items-baseline gap-1    `}
               key={item.id}
             >

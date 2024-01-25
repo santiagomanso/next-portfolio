@@ -7,6 +7,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import { LanguageProvider } from '@/context/LanguageContext'
 import Navbar from '@/components/navbar/navbar'
 import { inconsolata, inter, staatliches } from '@/utils/fonts'
+import ThemeProvider from '@/components/theme-provider'
 
 config.autoAddCss = false
 
@@ -27,12 +28,14 @@ export default function RootLayout({
       className={` ${staatliches.variable} ${inter.variable} ${inconsolata.variable} `}
     >
       <body>
-        <AppContainer>
-          <LanguageProvider>
-            <Navbar />
-            {children}
-          </LanguageProvider>
-        </AppContainer>
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <AppContainer>
+            <LanguageProvider>
+              <Navbar />
+              {children}
+            </LanguageProvider>
+          </AppContainer>
+        </ThemeProvider>
       </body>
     </html>
   )
