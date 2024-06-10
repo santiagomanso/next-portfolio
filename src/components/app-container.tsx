@@ -1,5 +1,5 @@
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const AppContainer = ({ children }: Props) => {
@@ -9,7 +9,7 @@ const AppContainer = ({ children }: Props) => {
         {children}
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default AppContainer
+export default AppContainer;

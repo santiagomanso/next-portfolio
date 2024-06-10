@@ -1,10 +1,10 @@
-import { NavDataI } from '@/settings/navbarData'
+import { NavDataI } from '@/settings/navbarData';
 
 interface Props {
-  handleNavigation: (path: string | boolean, externalHref: boolean) => void
-  navData: NavDataI
-  language: string
-  location: string
+  handleNavigation: (path: string | boolean, externalHref: boolean) => void;
+  navData: NavDataI;
+  language: string;
+  location: string;
 }
 
 export default function PcNavbar({
@@ -44,7 +44,6 @@ export default function PcNavbar({
       </div>
       <ul className='flex items-center gap-16'>
         {navData.links.map((item) => {
-          console.log('item', typeof item)
           return (
             <li
               onClick={() => handleNavigation(item.path, item.externalHref)}
@@ -75,9 +74,9 @@ export default function PcNavbar({
                 {item.label[language]}
               </p>
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
+  );
 }
