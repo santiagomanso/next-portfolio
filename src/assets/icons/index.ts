@@ -1,17 +1,17 @@
-import Firebase from './svg/Firebase.svg';
-import TypeScript from './svg/TypeScript.svg';
-import JavaScript from './svg/JavaScript.svg';
-import React from './svg/React.svg';
-import NextJs from './svg/NextJs.svg';
-import NodeJs from './svg/NodeJs.svg';
-import Redux from './svg/Redux.svg';
-import Tailwind from './svg/Tailwind.svg';
-import ReactNative from './svg/ReactNative.svg';
-import Git from './svg/Git.svg';
-import GitHub from './svg/GitHub.svg';
-import Figma from './svg/Figma.svg';
-import Android from './svg/Android.svg';
-import Ios from './svg/Ios.svg';
+import Firebase from './svg/firebase.svg';
+import TypeScript from './svg/typescript.svg';
+import JavaScript from './svg/javascript.svg';
+import React from './svg/react.svg';
+import NextJs from './svg/nextjs.svg';
+import NodeJs from './svg/nodejs.svg';
+import Redux from './svg/redux.svg';
+import Tailwind from './svg/tailwind.svg';
+import ReactNative from './svg/reactnative.svg';
+import Git from './svg/git.svg';
+import GitHub from './svg/github.svg';
+import Figma from './svg/figma.svg';
+import Android from './svg/android.svg';
+import Ios from './svg/ios.svg';
 
 export const Icons = {
   Firebase,
