@@ -1,7 +1,7 @@
-'use client'
-import Container from '@/components/container'
-import PcIntroHome from '@/components/pc-intro'
-import ResponsiveIntroHome from '@/components/responsive-intro/responsive-intro-home'
+'use client';
+import Container from '@/components/container';
+import PcIntroHome from '@/components/pc-intro';
+import ResponsiveIntroHome from './_components/responsive-intro-home';
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <PcIntroHome />
       <ResponsiveIntroHome />
     </Container>
-  )
+  );
 }

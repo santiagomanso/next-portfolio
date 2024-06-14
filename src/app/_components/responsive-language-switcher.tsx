@@ -1,20 +1,20 @@
-import { LanguageContext } from '@/context/LanguageContext'
-import { Countries } from '@/settings/countries'
-import { useContext, useState } from 'react'
+import { LanguageContext } from '@/context/LanguageContext';
+import { Countries } from '@/settings/countries';
+import { useContext, useState } from 'react';
 
 export default function ResponsiveLanguageSwitcher() {
-  const { language, changeLanguage } = useContext(LanguageContext)
+  const { language, changeLanguage } = useContext(LanguageContext);
 
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(0);
   const handleClick = () => {
     if (selected >= 2) {
-      setSelected((prev) => prev - 2)
+      setSelected((prev) => prev - 2);
     } else {
-      setSelected((prev) => prev + 1)
+      setSelected((prev) => prev + 1);
     }
 
-    changeLanguage(Countries[selected].language, Countries[selected].flag)
-  }
+    changeLanguage(Countries[selected].language, Countries[selected].flag);
+  };
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function ResponsiveLanguageSwitcher() {
           className={`${
             language === 'es'
               ? 'text-purple-500'
-              : 'text-gray-700 dark:text-white'
+              : 'text-gray-700 dark:text-gray-400'
           }`}
         >
           es
@@ -38,7 +38,7 @@ export default function ResponsiveLanguageSwitcher() {
           className={`${
             language === 'en'
               ? 'text-purple-500'
-              : 'text-gray-700 dark:text-white'
+              : 'text-gray-700 dark:text-gray-400'
           }`}
         >
           en
@@ -47,12 +47,12 @@ export default function ResponsiveLanguageSwitcher() {
           className={`${
             language === 'de'
               ? 'text-purple-500'
-              : 'text-gray-700 dark:text-white'
+              : 'text-gray-700 dark:text-gray-400'
           }`}
         >
           de
         </p>
       </div>
     </div>
-  )
+  );
 }
