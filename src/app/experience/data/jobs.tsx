@@ -88,49 +88,61 @@ export const jobs: JobType[] = [
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
-        <Assets.Icons.React alt='React' className='h-6 w-6' />
+        <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
-        <Assets.Icons.NextJs alt='NextJs' className='h-5 w-5 dark:fill-white' />
+        <Assets.Icons.NextJs
+          alt='NextJs'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white'
+        />
         NextJs
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
-        <Assets.Icons.Tailwind alt='Tailwind' className='h-6 w-6' />
+        <Assets.Icons.Tailwind
+          alt='Tailwind'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         Tailwind CSS
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
-        <Assets.Icons.TypeScript alt='TypeScript' className='h-6 w-6' />
+        <Assets.Icons.TypeScript
+          alt='TypeScript'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         TypeScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
-        <Assets.Icons.JavaScript alt='JavaScript' className='h-5 w-5' />
+        <Assets.Icons.JavaScript
+          alt='JavaScript'
+          className='h-3 w-3 sm:h-5 sm:w-5'
+        />
         JavaScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
-        <Assets.Icons.NodeJs alt='NodeJs' className='h-6 w-6' />
+        <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
-        <Assets.Icons.Git alt='Git' className='h-6 w-6' />
+        <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
@@ -139,7 +151,7 @@ export const jobs: JobType[] = [
       >
         <Assets.Icons.GitHub
           alt='Github'
-          className='h-5 w-5 dark:fill-white fill-slate-800'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white fill-slate-800'
         />
         Github
       </span>,
@@ -202,49 +214,61 @@ export const jobs: JobType[] = [
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
-        <Assets.Icons.React alt='React' className='h-6 w-6' />
+        <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
-        <Assets.Icons.NextJs alt='NextJs' className='h-5 w-5 dark:fill-white' />
+        <Assets.Icons.NextJs
+          alt='NextJs'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white'
+        />
         NextJs
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
-        <Assets.Icons.Tailwind alt='Tailwind' className='h-6 w-6' />
+        <Assets.Icons.Tailwind
+          alt='Tailwind'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         Tailwind CSS
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
-        <Assets.Icons.TypeScript alt='TypeScript' className='h-6 w-6' />
+        <Assets.Icons.TypeScript
+          alt='TypeScript'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         TypeScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
-        <Assets.Icons.JavaScript alt='JavaScript' className='h-5 w-5' />
+        <Assets.Icons.JavaScript
+          alt='JavaScript'
+          className='h-3 w-3 sm:h-5 sm:w-5'
+        />
         JavaScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
-        <Assets.Icons.NodeJs alt='NodeJs' className='h-6 w-6' />
+        <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
-        <Assets.Icons.Git alt='Git' className='h-6 w-6' />
+        <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
@@ -253,7 +277,7 @@ export const jobs: JobType[] = [
       >
         <Assets.Icons.GitHub
           alt='Github'
-          className='h-5 w-5 dark:fill-white fill-slate-800'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white fill-slate-800'
         />
         Github
       </span>,
@@ -263,7 +287,7 @@ export const jobs: JobType[] = [
       >
         <Assets.Icons.Android
           alt='Android'
-          className='h-5 w-5 dark:fill-white fill-slate-800'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white fill-slate-800'
         />
         Android
       </span>,
@@ -273,7 +297,7 @@ export const jobs: JobType[] = [
       >
         <Assets.Icons.Ios
           alt='Ios'
-          className='h-5 w-5 dark:fill-white fill-slate-800'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white fill-slate-800'
         />
         iOS
       </span>,
@@ -342,77 +366,89 @@ export const jobs: JobType[] = [
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
-        <Assets.Icons.React alt='React' className='h-6 w-6' />
+        <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
-        <Assets.Icons.ReactNative alt='ReactNative' className='h-6 w-6' />
+        <Assets.Icons.ReactNative
+          alt='ReactNative'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         React Native
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
-        <Assets.Icons.Redux alt='Redux' className='h-6 w-6' />
+        <Assets.Icons.Redux alt='Redux' className='h-4 w-4 sm:h-6 sm:w-6' />
         Redux
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
-        <Assets.Icons.Firebase alt='Firebase' className='h-6 w-6' />
+        <Assets.Icons.Firebase
+          alt='Firebase'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         Firebase
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
-        <Assets.Icons.Android alt='Android' className='h-6 w-6' />
+        <Assets.Icons.Android alt='Android' className='h-4 w-4 sm:h-6 sm:w-6' />
         Android
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
-        <Assets.Icons.Ios alt='Ios' className='h-6 w-6' />
+        <Assets.Icons.Ios alt='Ios' className='h-4 w-4 sm:h-6 sm:w-6' />
         iOS
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
-        <Assets.Icons.TypeScript alt='TypeScript' className='h-6 w-6' />
+        <Assets.Icons.TypeScript
+          alt='TypeScript'
+          className='h-4 w-4 sm:h-6 sm:w-6'
+        />
         TypeScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={8}
       >
-        <Assets.Icons.Figma alt='Figma' className='h-6 w-6' />
+        <Assets.Icons.Figma alt='Figma' className='h-4 w-4 sm:h-6 sm:w-6' />
         Figma
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={9}
       >
-        <Assets.Icons.JavaScript alt='JavaScript' className='h-5 w-5' />
+        <Assets.Icons.JavaScript
+          alt='JavaScript'
+          className='h-3 w-3 sm:h-5 sm:w-5'
+        />
         JavaScript
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={10}
       >
-        <Assets.Icons.NodeJs alt='NodeJs' className='h-6 w-6' />
+        <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
         className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={11}
       >
-        <Assets.Icons.Git alt='Git' className='h-6 w-6' />
+        <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
@@ -421,7 +457,7 @@ export const jobs: JobType[] = [
       >
         <Assets.Icons.GitHub
           alt='Github'
-          className='h-5 w-5 dark:fill-white fill-slate-800'
+          className='h-3 w-3 sm:h-5 sm:w-5 dark:fill-white fill-slate-800'
         />
         Github
       </span>,

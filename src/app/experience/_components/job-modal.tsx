@@ -102,7 +102,7 @@ const labels: LabelsTypes = {
 export default function JobModal({ open, setOpen, state, language }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className='dark:bg-neutral-900 w-full h-full md:h-auto max-w-2xl'>
+      <DialogContent className='dark:bg-neutral-900 w-full h-full md:h-auto max-w-2xl overflow-auto'>
         <DialogHeader>
           <div className='flex items-center gap-4'>
             <img
@@ -110,7 +110,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
               width={48}
               height={48}
               alt='GetRegulars Logo'
-              className='rounded-full'
+              className='rounded-full p-1 bg-neutral-600 h-20 w-20'
             />
             <div className='grid gap-1'>
               <DialogTitle>{state.position[language]}</DialogTitle>
@@ -187,7 +187,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
         </div>
         <DialogFooter>
           <button
-            className='dark:bg-neutral-800 bg-slate-100 border-slate-300 border transition-all duration-150 ease-in-out active:translate-y-3 dark:border-neutral-950 px-5 py-2 rounded'
+            className='dark:bg-neutral-800 bg-slate-100 border-slate-300 border transition-all duration-150 ease-in-out active:translate-y-3 dark:border-neutral-950 px-3 py-1 sm:px-5 sm:py-2 rounded'
             onClick={() => setOpen(false)}
           >
             {labels.close[language]}
