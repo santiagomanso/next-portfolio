@@ -1,40 +1,34 @@
-import Link from 'next/link'
-import ResponsiveHeaderTypewritter from './components/header-typewritter'
-import ResponsiveLanguageSwitcher from './components/responsive-language-switcher'
-import PortfolioLink from './components/portfolio-link'
-import YearsOfExperience from './components/experience-years'
-import ThemeSwitcher from '../theme-switcher'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import SkillsSection from './components/skills'
-import { useState } from 'react'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
-import MyCv from './components/my-curriculum'
+import Link from 'next/link';
+import ResponsiveLanguageSwitcher from './components/responsive-language-switcher';
+import YearsOfExperience from './components/experience-years';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+import MyCv from './components/my-curriculum';
+import { SkillsSection } from './components/skills';
+import BentoTypewritter from './components/header-typewritter';
+import ExperienceLink from './components/portfolio-link';
+import BentoThemeSwitcher from './components/bento-theme-switcher';
 
-export default function ResponsiveIntroHome() {
-  const [isClicked, setIsClicked] = useState(false)
+export default function BentoGrid() {
   return (
     <section className='lg:hidden h-full w-full grid grid-cols-3 grid-rows-12 gap-2 overflow-auto font-primary sm:max-w-2xl'>
       <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  col-span-3 row-span-2 flex flex-col justify-center'>
-        <ResponsiveHeaderTypewritter />
+        <BentoTypewritter />
       </article>
       <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg '>
         <ResponsiveLanguageSwitcher />
       </article>
       <Link
-        href='/portfolio'
+        href='/experience'
         className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  col-span-2'
       >
-        <PortfolioLink />
+        <ExperienceLink />
       </Link>
-      <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  h-full overflow-hidden row-span-1'>
-        <SkillsSection />
-      </article>
-      <article
-        onClick={() => setIsClicked(!isClicked)}
-        className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  h-full justify-center items-center flex'
-      >
-        <ThemeSwitcher isResponsive isClicked={isClicked} />
-      </article>
+
+      <SkillsSection />
+
+      <BentoThemeSwitcher />
+
       <a
         href='https://www.linkedin.com/in/santimanso/'
         target='_blank'
@@ -68,5 +62,5 @@ export default function ResponsiveIntroHome() {
         12
       </article>
     </section>
-  )
+  );
 }
