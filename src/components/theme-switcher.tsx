@@ -1,26 +1,30 @@
 'use client';
+import React from 'react';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTheme } from 'next-themes';
-import React, { SetStateAction, useEffect, useState } from 'react';
 
 interface Props {
-  setOpen?: React.Dispatch<SetStateAction<boolean>>;
   isResponsive?: boolean;
   isClicked?: boolean;
 }
 
-const ThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
+const ThemeSwitcher = ({ isResponsive, isClicked }: Props) => {
   const { theme, setTheme } = useTheme();
-  const [resolvedTheme, setResolvedTheme] = useState<string>('');
+  const [resolvedTheme, setResolvedTheme] = React.useState<string>('');
 
-  const handleClick = () => {
+  const handleClick = React.useCallback(() => {
     return theme === 'dark' ? setTheme('light') : setTheme('dark');
-  };
+  }, [theme, setTheme]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     theme && setResolvedTheme(theme);
   }, [theme]);
+
+  React.useEffect(() => {
+    handleClick();
+    //eslint-disable-next-line
+  }, [isClicked]);
 
   return isResponsive ? (
     <div
