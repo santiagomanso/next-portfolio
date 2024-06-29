@@ -5,13 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTheme } from 'next-themes';
 import React, { SetStateAction, useEffect, useState } from 'react';
 
-interface Props {
-  setOpen?: React.Dispatch<SetStateAction<boolean>>;
-  isResponsive?: boolean;
-  isClicked?: boolean;
-}
-
-const BentoThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
+export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
   const [resolvedTheme, setResolvedTheme] = useState<string>('');
 
@@ -25,7 +19,7 @@ const BentoThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
 
   return (
     <article
-      className='border-[1px] dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  h-full justify-center items-center flex'
+      className='border-[1px] dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  h-full justify-center items-center flex'
       onClick={handleClick}
     >
       <FontAwesomeIcon
@@ -36,6 +30,4 @@ const BentoThemeSwitcher = ({ setOpen, isResponsive, isClicked }: Props) => {
       />
     </article>
   );
-};
-
-export default BentoThemeSwitcher;
+}

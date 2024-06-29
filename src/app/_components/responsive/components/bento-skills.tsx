@@ -24,7 +24,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
-export function SkillsSection() {
+export default function Skills() {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
@@ -34,14 +34,14 @@ export function SkillsSection() {
 
   return (
     <article
-      className='border-[1px] flex items-center justify-center  dark:bg-transparent border-sky-900 dark:border-purple-400/60 rounded-lg  h-full overflow-hidden row-span-1'
+      className='border-[1px] flex items-center justify-center  dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  h-full overflow-hidden row-span-1'
       onClick={handleClick}
     >
       <Drawer open={open} onOpenChange={setOpen}>
-        <DrawerTrigger asChild>
+        <DrawerTrigger asChild className='transition-none'>
           <Button
             variant='ghost'
-            className='outline-none border-none  text-3xl tracking-wider text-gray-700 dark:text-white'
+            className='text-3xl tracking-wider text-gray-700 dark:text-white'
           >
             Skills
           </Button>

@@ -9,6 +9,19 @@ import {
 import { JobType } from '../data/jobs';
 import { Assets } from '@/assets';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Image from 'next/image';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
+import { Button } from '@/components/ui/button';
 
 type Props = {
   open: boolean;
@@ -100,16 +113,18 @@ const labels: LabelsTypes = {
 };
 
 export default function JobModal({ open, setOpen, state, language }: Props) {
-  return (
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isSmall = useMediaQuery('(max-width: 375px)');
+  return isDesktop ? (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className='dark:bg-neutral-900 w-full h-full md:h-auto max-w-2xl overflow-auto'>
         <DialogHeader>
           <div className='flex items-center gap-4'>
-            <img
+            <Image
               src={state.picture}
               width={48}
               height={48}
-              alt='GetRegulars Logo'
+              alt={state.company}
               className='rounded-full p-1 bg-neutral-600 h-20 w-20'
             />
             <div className='grid gap-1'>
@@ -195,12 +210,114 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
         </DialogFooter>
       </DialogContent>
     </Dialog>
+  ) : (
+    <Drawer open={open} onOpenChange={setOpen}>
+      <DrawerContent
+        className={`bg-gray-100 dark:border-neutral-700 ${
+          isSmall ? 'h-full' : 'h-auto'
+        } dark:bg-neutral-950`}
+      >
+        <DrawerHeader className='text-left'>
+          <div className='flex items-center gap-4'>
+            <Image
+              src={state.picture}
+              width={48}
+              height={48}
+              alt={state.company}
+              className='rounded-full p-1 bg-neutral-600 h-20 w-20'
+            />
+            <div className='grid gap-1'>
+              <DrawerTitle>{state.position[language]}</DrawerTitle>
+              <DrawerDescription className='text-sm text-gray-500 dark:text-gray-400'>
+                @{state.company}
+              </DrawerDescription>
+            </div>
+          </div>
+        </DrawerHeader>
+        <div
+          className={`grid ${isSmall ? 'gap-2' : 'gap-6'} px-4 overflow-auto`}
+        >
+          <Tabs defaultValue='responsabilities' className='text-justify '>
+            <TabsList className=' rounded-sm dark:border-neutral-700 dark:bg-neutral-800 '>
+              <TabsTrigger
+                value='responsabilities'
+                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+              >
+                {labels.responsabilities[language]}
+              </TabsTrigger>
+              <TabsTrigger
+                value="What I've Learned"
+                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+              >
+                {labels.whatILearned[language]}
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent
+              value='responsabilities'
+              className='h-[300px] overflow-auto'
+            >
+              <ul>
+                {state.responsabilities[language].map((item, index) => {
+                  return (
+                    <li className='text-sm dark:text-gray-300 py-1' key={index}>
+                      - {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </TabsContent>
+            <TabsContent
+              value="What I've Learned"
+              className='h-[300px] overflow-auto'
+            >
+              <ul>
+                {state.whatILearned[language].map((item, index) => {
+                  return (
+                    <li className='text-sm dark:text-gray-300 py-1' key={index}>
+                      - {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </TabsContent>
+          </Tabs>
+
+          <div className='grid gap-2 grid-cols-2'>
+            <article className='flex flex-col'>
+              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+                {labels.duration[language]}
+              </div>
+              <div className='text-base'>{`${state.duration} ${labels.months[language]}`}</div>
+            </article>
+            <article className='self-end flex flex-col items-end'>
+              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+                {labels.jobType[language]}
+              </div>
+              <div className='text-base'>{state.jobType}</div>
+            </article>
+          </div>
+          <div className='grid gap-2'>
+            <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+              {labels.technologiesTools[language]}
+            </div>
+            <div className='flex flex-wrap gap-2'>
+              {state.skills.map((item) => {
+                return item;
+              })}
+            </div>
+          </div>
+        </div>
+        <DrawerFooter className={`${isSmall ? 'p-3' : 'p-6'}`}>
+          <DrawerClose asChild>
+            <Button
+              variant='outline'
+              className='bg-gradient-to-br border-gray-500/30  from-neutral-300 to-neutral-300 dark:from-neutral-800 dark:to-stone-950 dark:border-stone-800'
+            >
+              Close
+            </Button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
-}
-
-{
-  /* <DialogContent className="sm:max-w-[650px]">
-
-        
-      </DialogContent> */
 }

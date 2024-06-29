@@ -85,14 +85,14 @@ export const jobs: JobType[] = [
       'https://media.licdn.com/dms/image/D4D0BAQE5uBtNYmZ_0A/company-logo_200_200/0/1702722568645/getregulars_logo?e=1726099200&v=beta&t=D60ic75DVF0EoIfV9GoTteQwiQ0ZndkvjSHY-1Vs9Sw',
     skills: [
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
         <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
         <Assets.Icons.NextJs
@@ -102,7 +102,7 @@ export const jobs: JobType[] = [
         NextJs
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
         <Assets.Icons.Tailwind
@@ -112,7 +112,7 @@ export const jobs: JobType[] = [
         Tailwind CSS
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
         <Assets.Icons.TypeScript
@@ -122,7 +122,7 @@ export const jobs: JobType[] = [
         TypeScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
         <Assets.Icons.JavaScript
@@ -132,21 +132,21 @@ export const jobs: JobType[] = [
         JavaScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
         <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
         <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={8}
       >
         <Assets.Icons.GitHub
@@ -211,14 +211,14 @@ export const jobs: JobType[] = [
       'https://media.licdn.com/dms/image/D4D0BAQFHg-49iWaO0g/company-logo_200_200/0/1697023101791/laboratorios_equisalud_logo?e=1726099200&v=beta&t=CHbsAijDeC5dm8Zsy1uQphF0HTJG9pfD-SP3TSFPh3E',
     skills: [
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
         <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
         <Assets.Icons.NextJs
@@ -228,7 +228,7 @@ export const jobs: JobType[] = [
         NextJs
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
         <Assets.Icons.Tailwind
@@ -238,7 +238,7 @@ export const jobs: JobType[] = [
         Tailwind CSS
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
         <Assets.Icons.TypeScript
@@ -248,7 +248,7 @@ export const jobs: JobType[] = [
         TypeScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
         <Assets.Icons.JavaScript
@@ -258,21 +258,21 @@ export const jobs: JobType[] = [
         JavaScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
         <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
         <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={8}
       >
         <Assets.Icons.GitHub
@@ -282,7 +282,7 @@ export const jobs: JobType[] = [
         Github
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={9}
       >
         <Assets.Icons.Android
@@ -292,7 +292,7 @@ export const jobs: JobType[] = [
         Android
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={10}
       >
         <Assets.Icons.Ios
@@ -363,14 +363,14 @@ export const jobs: JobType[] = [
       'https://media.licdn.com/dms/image/D4D0BAQG0NxhcaykQUg/company-logo_200_200/0/1688569458939?e=1726099200&v=beta&t=u6AlvXardkCc7NgQdH9Auz_p9FRe5-mYwgaXvGPDOu0',
     skills: [
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={1}
       >
         <Assets.Icons.React alt='React' className='h-4 w-4 sm:h-6 sm:w-6' />
         React
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={2}
       >
         <Assets.Icons.ReactNative
@@ -380,14 +380,14 @@ export const jobs: JobType[] = [
         React Native
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={3}
       >
         <Assets.Icons.Redux alt='Redux' className='h-4 w-4 sm:h-6 sm:w-6' />
         Redux
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={4}
       >
         <Assets.Icons.Firebase
@@ -397,21 +397,21 @@ export const jobs: JobType[] = [
         Firebase
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={5}
       >
         <Assets.Icons.Android alt='Android' className='h-4 w-4 sm:h-6 sm:w-6' />
         Android
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={6}
       >
         <Assets.Icons.Ios alt='Ios' className='h-4 w-4 sm:h-6 sm:w-6' />
         iOS
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={7}
       >
         <Assets.Icons.TypeScript
@@ -421,14 +421,14 @@ export const jobs: JobType[] = [
         TypeScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={8}
       >
         <Assets.Icons.Figma alt='Figma' className='h-4 w-4 sm:h-6 sm:w-6' />
         Figma
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={9}
       >
         <Assets.Icons.JavaScript
@@ -438,21 +438,21 @@ export const jobs: JobType[] = [
         JavaScript
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={10}
       >
         <Assets.Icons.NodeJs alt='NodeJs' className='h-4 w-4 sm:h-6 sm:w-6' />
         NodeJs
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={11}
       >
         <Assets.Icons.Git alt='Git' className='h-4 w-4 sm:h-6 sm:w-6' />
         Git
       </span>,
       <span
-        className='inline-flex items-center gap-2 rounded bg-slate-100 border border-gray-200 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
+        className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
         key={12}
       >
         <Assets.Icons.GitHub
