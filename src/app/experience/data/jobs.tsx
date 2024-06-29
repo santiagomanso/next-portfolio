@@ -16,7 +16,7 @@ export type JobType = {
     en: string[];
   };
   startDate: string;
-  endDate: string;
+  endDate?: string;
   duration: string;
   jobType: string;
   picture: string;
@@ -45,7 +45,7 @@ function calculateDuration(start: string, end?: string) {
     (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 30),
   );
 
-  return `${startFormatted} - ${endFormatted} (${duration}`;
+  return `${duration}`;
 }
 
 export const jobs: JobType[] = [
@@ -77,8 +77,8 @@ export const jobs: JobType[] = [
         'Arbeitete an Design und Funktionalität der digitalen Mitgliedskarten, wodurch die Benutzererfahrung und die visuelle Attraktivität des Dienstes verbessert wurden.',
       ],
     },
-    startDate: '2021-06-01',
-    endDate: '2021-08-01',
+    startDate: '08/2022',
+    endDate: '01/2023',
     duration: calculateDuration('2022-08-01', '2023-01-01'),
     jobType: 'internship - remote',
     picture:
@@ -203,8 +203,8 @@ export const jobs: JobType[] = [
         'Arbeitete mit UX/UI-Teams zusammen, um Einblicke und Feedback zu geben und das Gesamtdesign und die Funktionalität der Anwendungen zu verbessern.',
       ],
     },
-    startDate: '2021-06-01',
-    endDate: '2021-08-01',
+    startDate: '02/2023',
+    endDate: '01/2024',
     duration: calculateDuration('2023-02-01', '2024-01-01'),
     jobType: 'full time - remote',
     picture:
@@ -355,8 +355,7 @@ export const jobs: JobType[] = [
         'Trug zur Entwicklung von Benutzer-Dashboards und internen Tools mit Next.js bei, was die Unternehmensoperationen und die Benutzererfahrung verbesserte.',
       ],
     },
-    startDate: '2021-06-01',
-    endDate: '2021-08-01',
+    startDate: '02/2023',
     duration: calculateDuration('2024-02-01'),
     jobType: 'full time - remote',
     picture:

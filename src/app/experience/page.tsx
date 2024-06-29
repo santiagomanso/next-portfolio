@@ -63,7 +63,32 @@ export default function Page() {
   const handleChangeJob = (job: JobType) => {
     setState(job);
     setOpen(true);
+    // Push a new entry into the history stack.
+    // This ensures that the "back" gesture has a state to pop to,
+    // which we intercept to close the modal instead.
+    window.history.pushState({ modalOpen: true }, '');
   };
+
+  React.useEffect(() => {
+    const handleBackGesture = (event: PopStateEvent) => {
+      // Check if the modal is open and the state is what we expect.
+      // If so, prevent the default back navigation and close the modal instead.
+      if (open) {
+        event.preventDefault();
+        setOpen(false);
+        // Optionally, you can manipulate the history state here if needed.
+      }
+    };
+
+    // Add the event listener for the popstate event.
+    window.addEventListener('popstate', handleBackGesture);
+
+    // Return a cleanup function to remove the event listener
+    // when the component unmounts.
+    return () => {
+      window.removeEventListener('popstate', handleBackGesture);
+    };
+  }, [open]); // Ensure the effect runs again if `open` changes.
 
   return (
     <Container border background justifyCenter>

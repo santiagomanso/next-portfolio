@@ -72,6 +72,18 @@ type LabelsTypes = {
     es: string;
     de: string;
   };
+  currentDate: {
+    [index: string]: string;
+    en: string;
+    es: string;
+    de: string;
+  };
+  dates: {
+    [index: string]: string;
+    en: string;
+    es: string;
+    de: string;
+  };
 };
 
 const labels: LabelsTypes = {
@@ -81,9 +93,9 @@ const labels: LabelsTypes = {
     de: 'Dauer',
   },
   months: {
-    en: 'months)',
-    es: 'meses)',
-    de: 'Monate)',
+    en: 'months',
+    es: 'meses',
+    de: 'Monate',
   },
   jobType: {
     en: 'Job Type',
@@ -109,6 +121,16 @@ const labels: LabelsTypes = {
     en: 'Close',
     es: 'Cerrar',
     de: 'Schließen',
+  },
+  currentDate: {
+    en: 'Current Date',
+    es: 'Fecha Actual',
+    de: 'Aktuelles Datum',
+  },
+  dates: {
+    en: 'Dates',
+    es: 'Fechas',
+    de: 'Daten',
   },
 };
 
@@ -175,24 +197,32 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
             </TabsContent>
           </Tabs>
 
-          <div className='grid gap-2 grid-cols-2 '>
-            <article className='flex flex-col'>
-              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
-                {labels.duration[language]}
-              </div>
-              <div className='text-base'>{`${state.duration} ${labels.months[language]}`}</div>
+          <div className='grid gap-2 grid-cols-3 '>
+            <article className='flex flex-col  '>
+              <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+                {labels.dates[language]}
+              </p>
+              <p className='text-base'>{`${state.startDate} - ${
+                state.endDate ? state.endDate : labels.currentDate[language]
+              }`}</p>
             </article>
-            <article className='self-end flex flex-col items-end'>
-              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+            <article className='flex flex-col  items-center'>
+              <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+                {labels.duration[language]}
+              </p>
+              <p className='text-base'>{`${state.duration} ${labels.months[language]}`}</p>
+            </article>
+            <article className='  self-end flex flex-col items-end'>
+              <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
                 {labels.jobType[language]}
-              </div>
-              <div className='text-base'>{state.jobType}</div>
+              </p>
+              <p className='text-base'>{state.jobType}</p>
             </article>
           </div>
           <div className='grid gap-2'>
-            <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+            <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
               {labels.technologiesTools[language]}
-            </div>
+            </p>
             <div className='flex flex-wrap gap-2'>
               {state.skills.map((item) => {
                 return item;
@@ -214,7 +244,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerContent
         className={`bg-gray-100 dark:border-neutral-700 ${
-          isSmall ? 'h-full' : 'h-[700px]'
+          isSmall ? 'h-full' : 'h-[600px]'
         } dark:bg-neutral-950`}
       >
         <DrawerHeader className='text-left'>
@@ -284,16 +314,21 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
 
           <div className='grid gap-2 grid-cols-3'>
             <article className='flex flex-col col-span-2'>
-              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+              <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
                 {labels.duration[language]}
-              </div>
-              <div className='text-base'>{`${state.duration} ${labels.months[language]}`}</div>
+              </p>
+              <p className='text-base'>{`${state.startDate} - ${
+                state.endDate ? state.endDate : labels.currentDate[language]
+              }`}</p>
+              <p className='text-base'>{`${state.duration} ${labels.months[language]}`}</p>
             </article>
             <article className='self-end flex flex-col items-end'>
-              <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
+              <p className='text-sm font-medium text-gray-500 dark:text-gray-400'>
                 {labels.jobType[language]}
-              </div>
-              <div className='text-base'>{state.jobType}</div>
+              </p>
+              <p className='text-base whitespace-break-spaces text-end'>
+                {state.jobType}
+              </p>
             </article>
           </div>
           <div className='grid gap-2'>
@@ -301,9 +336,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
               {labels.technologiesTools[language]}
             </div>
             <div className='flex flex-wrap gap-2'>
-              {state.skills.map((item) => {
-                return item;
-              })}
+              {state.skills.map((item) => item)}
             </div>
           </div>
         </div>
