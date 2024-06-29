@@ -1,13 +1,15 @@
 'use client';
 import Container from '@/components/container';
-import PcIntroHome from '@/components/pc-intro';
-import ResponsiveIntroHome from './_components/responsive-intro-home';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import LaptopHome from './_components/laptop';
+import ResponsiveHome from './_components/responsive';
 
 export default function Home() {
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+
   return (
     <Container border background justifyCenter padding='p-2 lg:px-5 lg:py-4'>
-      <PcIntroHome />
-      <ResponsiveIntroHome />
+      {isDesktop ? <LaptopHome /> : <ResponsiveHome />}
     </Container>
   );
 }

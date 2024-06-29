@@ -8,6 +8,7 @@ import { jobs, JobType } from './data/jobs';
 import { LanguageContext } from '@/context/LanguageContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 const initialState = {
   id: 0,
@@ -78,10 +79,12 @@ export default function Page() {
           className='order-5 lg:order-1 flex flex-col cursor-pointer items-center gap-2 relative'
         >
           <div className='p-1 bg-gray-500 dark:bg-slate-600 rounded-full'>
-            <img
+            <Image
+              height={100}
+              width={100}
               src={jobs[0].picture}
               alt=''
-              className=' rounded-full h-20 w-20 sm:h-28 sm::w-28'
+              className='rounded-full h-20 w-20 sm:h-28 sm:w-28 lg:h-32 lg:w-32'
             />
           </div>
           <p className='lg:absolute lg:-bottom-12 bg-gray-300/40  border-slate-400/40 text-gray-700 dark:bg-gradient-to-b dark:from-neutral-800 dark:text-gray-200 dark:to-neutral-900 px-5 py-2 rounded border-[0.10rem] dark:border-neutral-900/40'>
@@ -99,10 +102,12 @@ export default function Page() {
           className='order-3 flex flex-col cursor-pointer items-center gap-2 relative'
         >
           <div className='p-1 bg-gray-500 dark:bg-slate-600 rounded-full'>
-            <img
+            <Image
+              height={100}
+              width={100}
               src={jobs[1].picture}
               alt=''
-              className=' rounded-full h-20 w-20 sm:h-28 sm::w-28'
+              className='rounded-full h-20 w-20 sm:h-28 sm:w-28 lg:h-32 lg:w-32'
             />
           </div>
           <p className='lg:absolute lg:-bottom-12 bg-gray-300/40  border-slate-400/40 text-gray-700 dark:bg-gradient-to-b dark:from-neutral-800 dark:text-gray-200 dark:to-neutral-900 px-5 py-2 rounded border-[0.10rem] dark:border-neutral-900/40'>
@@ -120,10 +125,12 @@ export default function Page() {
           className='order-1 lg:order-5 flex flex-col relative cursor-pointer justify-center items-center gap-2'
         >
           <div className='p-1 bg-gray-500 dark:bg-slate-600 rounded-full relative'>
-            <img
+            <Image
+              height={100}
+              width={100}
               src={jobs[2].picture}
               alt=''
-              className=' rounded-full h-20 w-20 sm:h-28 sm::w-28'
+              className='rounded-full h-20 w-20 sm:h-28 sm:w-28 lg:h-32 lg:w-32'
             />
             <Badge className='absolute bg-purple-700 dark:text-white font-secondary top-1/2 -translate-y-1/2 lg:-top-4 -right-16 lg:right-auto lg:left-1/2 lg:-translate-x-1/2 hover:bg-purple-700'>
               {label.actual[language]}

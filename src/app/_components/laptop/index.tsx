@@ -25,7 +25,7 @@ const text: TextI = {
   },
 };
 
-export default function PcIntroHome() {
+export default function LaptopHome() {
   const { language } = useContext(LanguageContext);
   return (
     <section
