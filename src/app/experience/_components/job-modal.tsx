@@ -214,7 +214,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerContent
         className={`bg-gray-100 dark:border-neutral-700 ${
-          isSmall ? 'h-full' : 'h-auto'
+          isSmall ? 'h-full' : 'h-[700px]'
         } dark:bg-neutral-950`}
       >
         <DrawerHeader className='text-left'>
@@ -282,8 +282,8 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
             </TabsContent>
           </Tabs>
 
-          <div className='grid gap-2 grid-cols-2'>
-            <article className='flex flex-col'>
+          <div className='grid gap-2 grid-cols-3'>
+            <article className='flex flex-col col-span-2'>
               <div className='text-sm font-medium text-gray-500 dark:text-gray-400'>
                 {labels.duration[language]}
               </div>
