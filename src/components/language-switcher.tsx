@@ -1,41 +1,41 @@
-'use client'
-import { useEffect, useState, useContext, useRef } from 'react'
-import { LanguageContext } from '../context/LanguageContext'
-import { Countries, Country } from '@/settings/countries'
+'use client';
+import { useEffect, useState, useContext, useRef } from 'react';
+import { LanguageContext } from '../context/LanguageContext';
+import { Countries, Country } from '@/settings/countries';
 
 const LanguageSwitcher = () => {
-  const [open, setOpen] = useState(false) //<ul>activation
-  const [activeCountry, setActiveCountry] = useState('')
-  const menuRef = useRef<HTMLDivElement>(null)
+  const [open, setOpen] = useState(false); //<ul>activation
+  const [activeCountry, setActiveCountry] = useState('');
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  const { language, flag, changeLanguage } = useContext(LanguageContext)
+  const { language, flag, changeLanguage } = useContext(LanguageContext);
 
   const handleClick = (country: Country) => {
-    changeLanguage(country.language, country.flag)
-    setOpen(false)
-  }
+    changeLanguage(country.language, country.flag);
+    setOpen(false);
+  };
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setOpen(false)
+        setOpen(false);
       }
-    }
+    };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setOpen(false)
+        setOpen(false);
       }
-    }
+    };
 
-    document.addEventListener('mousedown', handleOutsideClick)
-    document.addEventListener('keydown', handleEscapeKey)
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('keydown', handleEscapeKey);
 
     return () => {
-      document.removeEventListener('mousedown', handleOutsideClick)
-      document.removeEventListener('keydown', handleEscapeKey)
-    }
-  }, [])
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, []);
 
   return (
     <div
@@ -50,7 +50,7 @@ const LanguageSwitcher = () => {
           alt={language}
           className='w-[32px] max-w-[80px] h-[30px]'
         />
-        <span className='text-zinc-700 dark:group-hover:text-white dark:text-gray-500'>
+        <span className='hidden lg:block text-zinc-700 dark:group-hover:text-white dark:text-gray-500'>
           {language}
         </span>
       </div>
@@ -74,11 +74,11 @@ const LanguageSwitcher = () => {
               />
               <span className='tracking-widest'>{country.name[language]}</span>
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default LanguageSwitcher
+export default LanguageSwitcher;

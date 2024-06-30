@@ -12,6 +12,7 @@ import GitHub from './svg/github.svg';
 import Figma from './svg/figma.svg';
 import Android from './svg/android.svg';
 import Ios from './svg/ios.svg';
+import ArrowLeft from './svg/arrowLeft.svg';
 
 export const Icons = {
   Firebase,
@@ -28,4 +29,5 @@ export const Icons = {
   Figma,
   Android,
   Ios,
+  ArrowLeft,
 };
