@@ -65,7 +65,7 @@ export default function HowICode() {
 
   return (
     <Drawer>
-      <DrawerTrigger className='text-2xl text-gray-700 dark:text-white font-secondary tracking-wide w-full h-full flex items-center justify-center flex-col gap-0 text-center'>
+      <DrawerTrigger className='text-2xl text-gray-700 dark:text-white tracking-wide w-full h-full flex items-center justify-center flex-col gap-0 text-center'>
         <span dangerouslySetInnerHTML={{ __html: labels.trigger[language] }} />
         <Youtube className='p-0 m-0 h-7 w-7 fill-white dark:fill-transparent stroke-sky-900 dark:stroke-gray-300' />
       </DrawerTrigger>
