@@ -55,7 +55,7 @@ export default function ResponsiveHome() {
           target='_blank'
           className=' w-full h-full flex items-center justify-center flex-col gap-0'
         >
-          <p className='text-2xl text-gray-700 dark:text-white font-secondary tracking-wide'>
+          <p className='text-2xl text-gray-700 dark:text-white tracking-wide'>
             MADRID
           </p>
           <MapPin className='p-0 m-0 fill-white dark:fill-transparent stroke-sky-900 dark:stroke-gray-300' />
