@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cdn3.iconfinder.com', 'media.licdn.com'],
+    domains: [
+      'cdn3.iconfinder.com',
+      'media.licdn.com',
+      'santimanso.com',
+      'raw.githubusercontent.com',
+    ],
   },
   webpack(config) {
     config.module.rules.push({

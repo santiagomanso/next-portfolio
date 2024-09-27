@@ -13,11 +13,14 @@ import Figma from './svg/figma.svg';
 import Android from './svg/android.svg';
 import Ios from './svg/ios.svg';
 import ArrowLeft from './svg/arrowLeft.svg';
+import Gps from './svg/gps.svg';
+import Python from './svg/python.svg';
 
 export const Icons = {
   Firebase,
   TypeScript,
   JavaScript,
+  Python,
   React,
   NextJs,
   NodeJs,
@@ -28,6 +31,7 @@ export const Icons = {
   GitHub,
   Figma,
   Android,
+  Gps,
   Ios,
   ArrowLeft,
 };
