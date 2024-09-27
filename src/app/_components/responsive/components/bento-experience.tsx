@@ -24,10 +24,7 @@ export default function ExperienceLink() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <Link
-      href='/experience'
-      className='border-[1px] dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  col-span-2'
-    >
+    <Link href='/experience' className='w-full h-full'>
       <div className='flex flex-col justify-center text-center items-center h-full'>
         <h2 className='text-3xl tracking-wider text-gray-700 dark:text-white'>
           {text.title[language]}

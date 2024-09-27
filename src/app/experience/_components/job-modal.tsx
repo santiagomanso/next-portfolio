@@ -243,9 +243,8 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
   ) : (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerContent
-        className={`bg-gray-100 dark:border-neutral-700 ${
-          isSmall ? 'h-full' : 'h-[600px]'
-        } dark:bg-neutral-950`}
+        className={`bg-gray-100 dark:border-neutral-700 dark:bg-neutral-950
+           ${isSmall ? 'h-full ' : 'h-full'} `}
       >
         <DrawerHeader className='text-left'>
           <div className='flex items-center gap-4'>
@@ -284,7 +283,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
             </TabsList>
             <TabsContent
               value='responsabilities'
-              className='h-[300px] overflow-auto'
+              className='h-[300px] overflow-auto animate-fade'
             >
               <ul>
                 {state.responsabilities[language].map((item, index) => {
@@ -298,7 +297,7 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
             </TabsContent>
             <TabsContent
               value="What I've Learned"
-              className='h-[300px] overflow-auto'
+              className='h-[300px] overflow-auto animate-fade'
             >
               <ul>
                 {state.whatILearned[language].map((item, index) => {
@@ -340,13 +339,13 @@ export default function JobModal({ open, setOpen, state, language }: Props) {
             </div>
           </div>
         </div>
-        <DrawerFooter className={`${isSmall ? 'p-3' : 'p-6'}`}>
+        <DrawerFooter className={`${isSmall ? 'p-3' : 'p-4'}`}>
           <DrawerClose asChild>
             <Button
               variant='outline'
               className='bg-gradient-to-br border-gray-500/30  from-neutral-300 to-neutral-300 dark:from-neutral-800 dark:to-stone-950 dark:border-stone-800'
             >
-              Close
+              {labels.close[language]}
             </Button>
           </DrawerClose>
         </DrawerFooter>

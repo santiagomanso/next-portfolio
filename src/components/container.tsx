@@ -1,10 +1,10 @@
 interface Props {
-  children: React.ReactNode
-  border?: boolean
-  gap?: boolean
-  justifyCenter?: boolean
-  padding?: string
-  background?: boolean
+  children: React.ReactNode;
+  border?: boolean;
+  gap?: boolean;
+  justifyCenter?: boolean;
+  padding?: string;
+  background?: boolean;
 }
 
 const Container = ({
@@ -17,7 +17,7 @@ const Container = ({
 }: Props) => {
   return (
     <section
-      className={`animate-fade animate-duration-400 animate-ease-out  lg:rounded-sm  transition-colors ease-in-out duration-500 flex flex-col h-full lg:h-3/4 lg:p-0 -z-1 overflow-auto items-center
+      className={`animate-fade animate-duration-400 animate-ease-out  lg:rounded-sm  transition-colors ease-in-out duration-500 flex flex-col h-full lg:w-full lg:h-3/4 lg:p-0 -z-1 overflow-auto items-center
        ${
          background
            ? 'bg-gradient-to-br dark:bg-gradient-to-tl to-white via-gray-50 from-gray-400 dark:from-zinc-900/70 dark:to-neutral-700'
@@ -35,7 +35,7 @@ const Container = ({
     >
       {children}
     </section>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;

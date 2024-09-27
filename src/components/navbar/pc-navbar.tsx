@@ -1,4 +1,4 @@
-import { NavDataI } from '@/settings/navbarData';
+import { NavDataI } from '@/components/navbar/navbarData';
 
 interface Props {
   handleNavigation: (path: string | boolean, externalHref: boolean) => void;

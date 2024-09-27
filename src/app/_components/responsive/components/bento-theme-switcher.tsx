@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTheme } from 'next-themes';
 import React, { SetStateAction, useEffect, useState } from 'react';
 
-export default function ThemeSwitcher() {
+interface Props {
+  border?: boolean;
+}
+
+export default function ThemeSwitcher({ border = true }: Props) {
   const { theme, setTheme } = useTheme();
   const [resolvedTheme, setResolvedTheme] = useState<string>('');
 
@@ -19,7 +23,9 @@ export default function ThemeSwitcher() {
 
   return (
     <article
-      className='border-[1px] dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  h-full justify-center items-center flex'
+      className={`dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  h-full justify-center items-center flex ${
+        border ? 'border-[1px]' : ''
+      }`}
       onClick={handleClick}
     >
       <FontAwesomeIcon
