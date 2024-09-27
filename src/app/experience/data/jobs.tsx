@@ -1,4 +1,5 @@
 import { Assets } from '@/assets';
+import { StaticImageData } from 'next/image';
 
 export type JobType = {
   id: number;
@@ -19,7 +20,7 @@ export type JobType = {
   endDate?: string;
   duration: string;
   jobType: string;
-  picture: string;
+  picture: StaticImageData;
   skills: JSX.Element[];
   whatILearned: {
     [index: string]: string[];
@@ -81,8 +82,7 @@ export const jobs: JobType[] = [
     endDate: '01/2023',
     duration: calculateDuration('2022-08-01', '2023-01-01'),
     jobType: 'internship - remote',
-    picture:
-      'https://media.licdn.com/dms/image/D4D0BAQE5uBtNYmZ_0A/company-logo_200_200/0/1702722568645/getregulars_logo?e=1726099200&v=beta&t=D60ic75DVF0EoIfV9GoTteQwiQ0ZndkvjSHY-1Vs9Sw',
+    picture: Assets.Images.GetRegulars,
     skills: [
       <span
         className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
@@ -207,8 +207,7 @@ export const jobs: JobType[] = [
     endDate: '01/2024',
     duration: calculateDuration('2023-02-01', '2024-01-01'),
     jobType: 'full time - remote',
-    picture:
-      'https://media.licdn.com/dms/image/D4D0BAQFHg-49iWaO0g/company-logo_200_200/0/1697023101791/laboratorios_equisalud_logo?e=1726099200&v=beta&t=CHbsAijDeC5dm8Zsy1uQphF0HTJG9pfD-SP3TSFPh3E',
+    picture: Assets.Images.EquiSalud,
     skills: [
       <span
         className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'
@@ -358,8 +357,7 @@ export const jobs: JobType[] = [
     startDate: '02/2023',
     duration: calculateDuration('2024-02-01'),
     jobType: 'full time - remote',
-    picture:
-      'https://media.licdn.com/dms/image/D4D0BAQG0NxhcaykQUg/company-logo_200_200/0/1688569458939?e=1726099200&v=beta&t=u6AlvXardkCc7NgQdH9Auz_p9FRe5-mYwgaXvGPDOu0',
+    picture: Assets.Images.RocketLabs,
     skills: [
       <span
         className='inline-flex items-center gap-2 rounded bg-gray-200 border border-gray-300 dark:border-neutral-700 px-3 py-1 text-sm font-medium dark:bg-neutral-800'

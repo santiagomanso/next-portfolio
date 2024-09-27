@@ -9,10 +9,11 @@ import { LanguageContext } from '@/context/LanguageContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import { Assets } from '@/assets';
 
 const initialState = {
   id: 0,
-  picture: '',
+  picture: Assets.Images.Placeholder,
   responsabilities: {
     en: [],
     es: [],
