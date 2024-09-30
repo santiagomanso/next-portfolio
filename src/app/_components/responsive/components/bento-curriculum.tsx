@@ -29,7 +29,7 @@ export default function CurriculumLink() {
 
   const handleClick = () => {
     window.open(
-      'https://santimanso.com/static/media/SantiagoMansoCastro_CV.8567079f951195ba615c.pdf',
+      'https://raw.githubusercontent.com/santiagomanso/next-portfolio/refs/heads/main/src/assets/SANTIAGO-CV.pdf',
       '_blank',
     );
   };

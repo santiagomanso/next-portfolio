@@ -77,7 +77,7 @@ export const navData: NavDataI = {
     },
     {
       id: 7,
-      path: 'https://github.com/santiagomanso/santimanso.com/raw/main/src/assets/SantiagoMansoCastro_CV.pdf',
+      path: 'https://raw.githubusercontent.com/santiagomanso/next-portfolio/refs/heads/main/src/assets/SANTIAGO-CV.pdf',
       label: { es: 'curriculum', de: 'curriculum', en: 'curriculum' },
       icon: <FontAwesomeIcon icon={faFolderOpen} />,
       externalHref: false,
