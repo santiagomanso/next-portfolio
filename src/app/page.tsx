@@ -8,7 +8,13 @@ export default function Home() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
-    <Container border background justifyCenter padding='p-2 lg:px-5 lg:py-4'>
+    <Container
+      border
+      background
+      justifyCenter
+      padding='p-2 lg:px-5 lg:py-4'
+      withImage //NOTE image on bottom right only on desktop
+    >
       {isDesktop ? <LaptopHome /> : <ResponsiveHome />}
     </Container>
   );

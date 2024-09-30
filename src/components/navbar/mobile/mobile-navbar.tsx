@@ -113,7 +113,7 @@ export default function MobileNavbar({
       className={`${
         location === '/'
           ? 'hidden'
-          : 'bg-gradient-to-br from-white to-white dark:from-neutral-700 dark:to-neutral-900 flex justify-between items-center w-full h-full lg:hidden py-2 px-4'
+          : 'bg-gradient-to-br to-gray-200 via-gray-100 from-gray-400 shadow-lg dark:from-neutral-700 dark:to-neutral-900 flex justify-between items-center w-full h-full lg:hidden py-2 px-4'
       }`}
       ref={menuRef}
     >

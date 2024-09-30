@@ -1,3 +1,4 @@
+import { Assets } from '@/assets';
 import { LanguageContext } from '@/context/LanguageContext';
 import { Countries } from '@/settings/countries';
 import { useContext, useState } from 'react';
@@ -21,11 +22,19 @@ export default function LanguageSwitcher() {
       className='flex flex-col text-center justify-center w-full h-full '
       onClick={handleClick}
     >
-      <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-5xl'>
+      <div className='flex justify-center'>
+        {language === 'en' && <Assets.Icons.Usa className='w-12 h-12' />}
+        {language === 'es' && <Assets.Icons.Spain className='w-12 h-12' />}
+        {language === 'de' && <Assets.Icons.Germany className='w-12 h-12' />}
+      </div>
+      {/* <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-4xl'>
         {language}
-      </h1>
-      <div className='flex justify-center text-center text-lg gap-2 w-full pr-1 tracking-wider'>
-        <p
+      </h1> */}
+      <div className='flex justify-center text-center text-base gap-2 w-full pr-1 tracking-wider'>
+        <Assets.Icons.Usa className='w-6 h-6' />
+        <Assets.Icons.Spain className='w-6 h-6' />
+        <Assets.Icons.Germany className='w-6 h-6' />
+        {/* <p
           className={`${
             language === 'es'
               ? 'text-purple-500'
@@ -51,7 +60,7 @@ export default function LanguageSwitcher() {
           }`}
         >
           de
-        </p>
+        </p> */}
       </div>
     </div>
   );

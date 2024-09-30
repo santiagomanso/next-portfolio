@@ -16,7 +16,7 @@ import AlsoLearning from './components/bento-also-learning';
 
 export default function ResponsiveHome() {
   return (
-    <section className='lg:hidden h-full w-full grid grid-cols-3 grid-rows-12 gap-2 overflow-auto font-primary sm:max-w-2xl'>
+    <section className='lg:hidden animate-fade h-full w-full grid grid-cols-3 grid-rows-12 gap-2 overflow-auto font-primary sm:max-w-2xl'>
       <article className='border-[1px] relative dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  col-span-3 row-span-2 flex flex-col justify-center overflow-hidden'>
         <TypeWritter />
         <Image

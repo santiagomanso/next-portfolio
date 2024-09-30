@@ -54,9 +54,9 @@ export const jobs: JobType[] = [
     id: 1,
     company: 'GetRegulars',
     position: {
-      es: 'Ingeniero de Software',
-      de: 'Softwareentwickler',
-      en: 'Software Engineer',
+      es: 'Desarrollador Fullstack',
+      de: 'Fullstack-Entwickler',
+      en: 'Fullstack Developer',
     },
     responsabilities: {
       en: [
@@ -81,7 +81,7 @@ export const jobs: JobType[] = [
     startDate: '08/2022',
     endDate: '01/2023',
     duration: calculateDuration('2022-08-01', '2023-01-01'),
-    jobType: 'internship - remote',
+    jobType: 'full time - remote',
     picture: Assets.Images.GetRegulars,
     skills: [
       <span
@@ -179,9 +179,9 @@ export const jobs: JobType[] = [
     id: 2,
     company: 'Equisalud',
     position: {
-      es: 'Ingeniero de Software',
-      de: 'Softwareentwickler',
-      en: 'Software Engineer',
+      es: 'Desarrollador Frontend',
+      de: 'Frontend-Entwickler',
+      en: 'Frontend Developer',
     },
     responsabilities: {
       en: [
@@ -330,9 +330,9 @@ export const jobs: JobType[] = [
     id: 3,
     company: 'Rocket Labs',
     position: {
-      es: 'Ingeniero de Software',
-      de: 'Softwareentwickler',
-      en: 'Software Engineer',
+      es: 'Desarollador Frontend',
+      de: 'Frontend-Entwickler',
+      en: 'Frontend Developer',
     },
     responsabilities: {
       en: [

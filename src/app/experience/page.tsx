@@ -137,7 +137,7 @@ export default function Page() {
               alt=''
               className='rounded-full h-20 w-20 sm:h-28 sm:w-28 lg:h-32 lg:w-32'
             />
-            <Badge className='absolute bg-purple-700 dark:text-white font-thin tracking-wider font-secondary top-1/2 -translate-y-1/2 lg:-top-4 -right-16 lg:right-auto lg:left-1/2 lg:-translate-x-1/2 hover:bg-purple-700'>
+            <Badge className='absolute bg-purple-700 dark:text-white font-thin tracking-wider top-1/2 -translate-y-1/2 lg:-top-4 -right-16 lg:right-auto lg:left-1/2 lg:-translate-x-1/2 hover:bg-purple-700'>
               {label.actual[language]}
             </Badge>
           </div>

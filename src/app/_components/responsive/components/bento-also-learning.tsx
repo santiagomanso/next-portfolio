@@ -18,7 +18,7 @@ export default function AlsoLearning() {
     <div className='w-full h-full flex flex-col items-center justify-center text-center gap-1'>
       <p
         dangerouslySetInnerHTML={{ __html: label[language] }}
-        className='text-2xl text-gray-700 dark:text-white tracking-wide'
+        className='text-2xl text-gray-700 dark:text-white'
       />
       <Assets.Icons.Python className='w-12 h-12 ' />
     </div>

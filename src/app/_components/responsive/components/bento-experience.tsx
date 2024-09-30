@@ -14,7 +14,7 @@ const text: TextI = {
     de: 'Erfahrung',
   },
   subtitle: {
-    en: '+2 years, where I worked and what I did',
+    en: '+2 years, check it out',
     es: '+2 años, donde trabajé y qué hice',
     de: '+2 Jahre, wo ich gearbeitet habe',
   },
@@ -26,7 +26,7 @@ export default function ExperienceLink() {
   return (
     <Link href='/experience' className='w-full h-full'>
       <div className='flex flex-col justify-center text-center items-center h-full'>
-        <h2 className='text-3xl tracking-wider text-gray-700 dark:text-white'>
+        <h2 className='text-2xl tracking-wider text-gray-700 dark:text-white'>
           {text.title[language]}
         </h2>
         <p className=' tracking-widest text-[13px] text-gray-700 dark:text-gray-300'>

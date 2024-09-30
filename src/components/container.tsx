@@ -1,3 +1,7 @@
+'use client';
+import { Assets } from '@/assets';
+import Image from 'next/image';
+
 interface Props {
   children: React.ReactNode;
   border?: boolean;
@@ -5,6 +9,7 @@ interface Props {
   justifyCenter?: boolean;
   padding?: string;
   background?: boolean;
+  withImage?: boolean;
 }
 
 const Container = ({
@@ -14,6 +19,7 @@ const Container = ({
   justifyCenter,
   padding,
   background,
+  withImage = false,
 }: Props) => {
   return (
     <section
@@ -31,8 +37,16 @@ const Container = ({
       }
       ${gap ? gap : 'gap-10'}
       ${justifyCenter ? ' justify-center' : 'justify-start'}
+      ${withImage && 'relative overflow-hidden'}
       `}
     >
+      {withImage && (
+        <Image
+          src={Assets.Images.Santi2}
+          alt='santi'
+          className='absolute bottom-0 right-0 w-[10%] hidden lg:block drop-shadow-[0_35px_35px_rgba(107,114,128,0.7)] dark:drop-shadow-[0_35px_35px_rgba(229,231,235,0.1)]'
+        />
+      )}
       {children}
     </section>
   );

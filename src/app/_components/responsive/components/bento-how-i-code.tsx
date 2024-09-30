@@ -26,7 +26,7 @@ const labels: LabelType = {
   trigger: {
     es: 'Como<br />Programo?',
     de: 'Wie ich<br />code?',
-    en: 'How I code?',
+    en: 'Want to see<br />me code?',
   },
   title: {
     es: 'Mi ultimo video',
