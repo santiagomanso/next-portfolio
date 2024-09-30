@@ -354,8 +354,8 @@ export const jobs: JobType[] = [
         'Trug zur Entwicklung von Benutzer-Dashboards und internen Tools mit Next.js bei, was die Unternehmensoperationen und die Benutzererfahrung verbesserte.',
       ],
     },
-    startDate: '02/2023',
-    duration: calculateDuration('2024-02-01'),
+    startDate: '04/2024',
+    duration: calculateDuration('2024-04-01'),
     jobType: 'full time - remote',
     picture: Assets.Images.RocketLabs,
     skills: [
