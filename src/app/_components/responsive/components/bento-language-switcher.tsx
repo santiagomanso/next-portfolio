@@ -30,11 +30,24 @@ export default function LanguageSwitcher() {
       {/* <h1 className=' tracking-widest font-semibold text-gray-700 dark:text-white text-4xl'>
         {language}
       </h1> */}
-      <div className='flex justify-center text-center text-base gap-2 w-full pr-1 tracking-wider'>
-        <Assets.Icons.Usa className='w-6 h-6' />
-        <Assets.Icons.Spain className='w-6 h-6' />
-        <Assets.Icons.Germany className='w-6 h-6' />
-        {/* <p
+      {/* <div className='flex justify-center text-center text-base gap-2 w-full pr-1 tracking-wider'>
+        <Assets.Icons.Spain
+          className={`w-6 h-6  ${
+            language === 'es' ? 'opacity-100' : 'opacity-40'
+          }`}
+        />
+        <Assets.Icons.Usa
+          className={`w-6 h-6  ${
+            language === 'en' ? 'opacity-100' : 'opacity-40'
+          }`}
+        />
+
+        <Assets.Icons.Germany
+          className={`w-6 h-6  ${
+            language === 'de' ? 'opacity-100' : 'opacity-40'
+          }`}
+        />
+        <p
           className={`${
             language === 'es'
               ? 'text-purple-500'
@@ -60,8 +73,8 @@ export default function LanguageSwitcher() {
           }`}
         >
           de
-        </p> */}
-      </div>
+        </p>
+      </div> */}
     </div>
   );
 }
