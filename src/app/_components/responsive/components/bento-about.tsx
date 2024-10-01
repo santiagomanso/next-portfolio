@@ -1,5 +1,6 @@
 import { Assets } from '@/assets';
 import { LanguageContext } from '@/context/LanguageContext';
+import Link from 'next/link';
 import React from 'react';
 
 type LabelType = {
@@ -7,20 +8,22 @@ type LabelType = {
 };
 
 const label: LabelType = {
-  es: 'estudiando<br />También',
-  de: 'Lernen<br />Auch',
-  en: 'Also<br />Learning',
+  es: 'Acerca<br />de mí',
+  de: 'Über<br />mich',
+  en: 'About<br />me',
 };
 
-export default function AlsoLearning() {
+export default function About() {
   const { language } = React.useContext(LanguageContext);
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center text-center gap-1'>
+    <Link
+      href='/about'
+      className='w-full h-full flex flex-col items-center justify-center text-center gap-1'
+    >
       <p
         dangerouslySetInnerHTML={{ __html: label[language] }}
         className='text-2xl text-gray-700 dark:text-white'
       />
-      <Assets.Icons.Python className='w-12 h-12 ' />
-    </div>
+    </Link>
   );
 }

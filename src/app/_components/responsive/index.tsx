@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import {
+  About,
   CurriculumLink,
   ExperienceLink,
+  HowICode,
   LanguageSwitcher,
   LinkedInLink,
   PortfolioLink,
@@ -11,8 +13,6 @@ import {
 } from './components';
 import { Assets } from '@/assets';
 import { MapPin, Youtube } from 'lucide-react';
-import HowICode from './components/bento-how-i-code';
-import AlsoLearning from './components/bento-also-learning';
 
 export default function ResponsiveHome() {
   return (
@@ -47,7 +47,7 @@ export default function ResponsiveHome() {
       <PortfolioLink />
 
       <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  row-span-2'>
-        <AlsoLearning />
+        <About />
       </article>
       <article className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  '>
         <a

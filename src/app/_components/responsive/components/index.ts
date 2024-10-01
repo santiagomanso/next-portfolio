@@ -6,6 +6,8 @@ import PortfolioLink from './bento-portfolio';
 import Skills from './bento-skills';
 import ThemeSwitcher from './bento-theme-switcher';
 import TypeWritter from './bento-typewritter';
+import About from './bento-about';
+import HowICode from './bento-how-i-code';
 
 export {
   CurriculumLink,
@@ -15,5 +17,7 @@ export {
   PortfolioLink,
   Skills,
   ThemeSwitcher,
+  HowICode,
   TypeWritter,
+  About,
 };

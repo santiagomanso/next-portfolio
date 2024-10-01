@@ -49,7 +49,7 @@ export function DrawerAside({
   responsiveData,
 }: Props) {
   return (
-    <Drawer onOpenChange={setIsOpen}>
+    <Drawer open={isOpen} onOpenChange={setIsOpen}>
       <DrawerTrigger asChild>
         <Button
           variant='ghost'
