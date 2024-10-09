@@ -1,88 +1,18 @@
 'use client';
-import { Assets } from '@/assets';
-import Container from '@/components/container';
-import { LanguageContext } from '@/context/LanguageContext';
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
 import { AwardIcon, LayoutGrid } from 'lucide-react';
+
+import { Assets } from '@/assets';
+import { labels } from '../data/labels';
+import { mediaData } from '../data/media';
+import { ImageModal } from './image-modal';
 import { Card } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-
-type LabelType = {
-  title: { [key: string]: string };
-  description: { [key: string]: string };
-  miscellanous: {
-    title: { [key: string]: string };
-    description: { [key: string]: string };
-  };
-  birthday: {
-    label: { [key: string]: string };
-    dateOfBirth: { [key: string]: string };
-  };
-  location: {
-    title: { [key: string]: string };
-    description: { [key: string]: string };
-  };
-  hobbies: {
-    title: { [key: string]: string };
-    description: { [key: string]: string };
-  };
-};
-
-const labels: LabelType = {
-  title: {
-    en: 'About',
-    es: 'Sobre mi',
-    de: 'Über mich',
-  },
-  description: {
-    en: "Hi! 👋🏼 I'm Santi, a software developer with expertise in frontend and backend technologies. I’ve worked with companies like Rocket Labs, building impactful mobile and web features using tools like React, Next.js, and Firebase. My experience includes AI-powered e-commerce features, robust authentication systems, and optimizing data rendering with pagination and infinite scroll. I prioritize clean, maintainable code, following best practices like the MVC pattern. Always eager for new challenges, my goal is to build software that works efficiently and delivers real value to users.",
-
-    es: '¡Hola! 👋🏼 Soy Santi, un desarrollador de software con experiencia en tecnologías frontend y backend. He trabajado con empresas como Rocket Labs, creando funciones para aplicaciones móviles y web usando herramientas como React, Next.js y Firebase. Mi experiencia incluye funciones con IA para e-commerce, sistemas de autenticación robustos y optimización de datos con paginación y scroll infinito. Priorizo el código limpio y mantenible, siguiendo prácticas como el patrón MVC. Siempre listo para nuevos retos, mi objetivo es crear software eficiente y útil para los usuarios.',
-    de: 'Hallo! 👋🏼 Ich bin Santi, ein Softwareentwickler mit Erfahrung in Frontend- und Backend-Technologien. Ich habe für Unternehmen wie Rocket Labs gearbeitet und mobile sowie Web-Funktionen mit React, Next.js und Firebase entwickelt. Meine Erfahrung umfasst KI-gestützte E-Commerce-Funktionen, robuste Authentifizierungssysteme und die Optimierung der Datendarstellung mit Paginierung und endlosem Scrollen. Ich lege Wert auf sauberen, wartbaren Code und befolge Best Practices wie das MVC-Muster. Ich freue mich auf neue Herausforderungen und darauf, Software zu entwickeln, die effizient ist und echten Mehrwert bietet.',
-  },
-  miscellanous: {
-    title: { en: 'Miscellaneous', es: 'Curiosidades', de: 'Verschiedenes' },
-    description: {
-      en: 'Here are some additional details about me.',
-      es: 'Aquí hay algunos detalles adicionales sobre mí.',
-      de: 'Hier sind einige zusätzliche Details über mich.',
-    },
-  },
-  birthday: {
-    label: {
-      en: 'Birthday',
-      es: 'Cumpleaños',
-      de: 'Geburtstag',
-    },
-    dateOfBirth: {
-      es: '5 de Abril 🐏',
-      en: 'April 5 🐏',
-      de: '5. April 🐏',
-    },
-  },
-  location: {
-    title: { es: 'Ubicación', en: 'Location', de: 'Standort' },
-    description: {
-      es: 'Copenhague, Dinamarca 🇩🇰.',
-      en: 'Copenhagen, Denmark 🇩🇰.',
-      de: 'Kopenhagen, Dänemark 🇩🇰.',
-    },
-  },
-  hobbies: {
-    title: {
-      es: 'Hobbies',
-      en: 'Hobbies',
-      de: 'Hobbys',
-    },
-    description: {
-      es: 'Toco la guitarra 🎸 y juego tenis 🎾.',
-      en: 'I play the guitar 🎸 and tennis 🎾.',
-      de: 'Ich spiele Gitarre 🎸, Tennis 🎾.',
-    },
-  },
-};
+import Container from '@/components/container';
+import { CertificatesData } from '../data/certificates';
+import { LanguageContext } from '@/context/LanguageContext';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 export default function About() {
   const { language } = React.useContext(LanguageContext);
@@ -109,25 +39,26 @@ export default function About() {
           >
             <TabsList className='grid grid-cols-3 gap-2 w-full lg:min-w-[900px] rounded-sm dark:border-neutral-700 dark:bg-neutral-800'>
               <TabsTrigger
-                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white capitalize'
                 value='bio'
               >
-                Bio
+                {labels.tabTriggers.bio[language]}
               </TabsTrigger>
               <TabsTrigger
-                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
-                value='media'
-              >
-                Media
-              </TabsTrigger>
-              <TabsTrigger
-                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white capitalize'
                 value='certifications'
               >
-                Certifications
+                {labels.tabTriggers.certifications[language]}
+              </TabsTrigger>
+              <TabsTrigger
+                className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white capitalize'
+                value='media'
+              >
+                {labels.tabTriggers.media[language]}
               </TabsTrigger>
             </TabsList>
 
+            {/* BIO */}
             <TabsContent
               value='bio'
               className={`py-5 md:pb-0 w-full ring-0 outline-0 border-0 flex flex-col gap-10 ${
@@ -226,6 +157,7 @@ export default function About() {
               </div>
             </TabsContent>
 
+            {/* MEDIA */}
             <TabsContent
               value='media'
               className={`py-5 md:pb-0 w-full ring-0 outline-0 border-0 flex flex-col gap-5 ${
@@ -239,43 +171,15 @@ export default function About() {
                     Check out some of my recent photos and videos.
                   </p>
                 </div>
-                <div className='grid grid-cols-2 gap-4'>
-                  <img
-                    src='/placeholder.svg'
-                    width={300}
-                    height={200}
-                    alt='Media 1'
-                    className='rounded-lg'
-                    style={{ aspectRatio: '300/200', objectFit: 'cover' }}
-                  />
-                  <img
-                    src='/placeholder.svg'
-                    width={300}
-                    height={200}
-                    alt='Media 2'
-                    className='rounded-lg'
-                    style={{ aspectRatio: '300/200', objectFit: 'cover' }}
-                  />
-                  <img
-                    src='/placeholder.svg'
-                    width={300}
-                    height={200}
-                    alt='Media 3'
-                    className='rounded-lg'
-                    style={{ aspectRatio: '300/200', objectFit: 'cover' }}
-                  />
-                  <img
-                    src='/placeholder.svg'
-                    width={300}
-                    height={200}
-                    alt='Media 4'
-                    className='rounded-lg'
-                    style={{ aspectRatio: '300/200', objectFit: 'cover' }}
-                  />
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-full'>
+                  {mediaData.map((item, index) => (
+                    <ImageModal language={language} key={index} item={item} />
+                  ))}
                 </div>
               </div>
             </TabsContent>
 
+            {/* CERTIFICATIONS */}
             <TabsContent
               value='certifications'
               className={`py-5 md:pb-0 w-full ring-0 outline-0 border-0 flex flex-col gap-5 ${
@@ -286,39 +190,34 @@ export default function About() {
             >
               <div className='grid gap-4'>
                 <div>
-                  <h3 className='text-2xl font-semibold'>Certifications</h3>
+                  <h3 className='text-2xl font-semibold capitalize'>
+                    {labels.tabTriggers.certifications[language]}
+                  </h3>
                   <p className='text-muted-foreground'>
-                    Here are some of the certifications I`&apos;`ve earned.
+                    {labels.certificationsDescription[language]}
                   </p>
                 </div>
-                <div className='grid gap-4'>
-                  <div className='flex items-center gap-4'>
-                    <div className='bg-gradient-to-br shadow rounded-md flex items-center justify-center aspect-square w-12'>
-                      <AwardIcon className='w-6 h-6' />
-                    </div>
-                    <div>
-                      <div className='font-semibold'>
-                        AWS Certified Solutions Architect - Associate
+                <ul className='grid gap-4'>
+                  {CertificatesData.map((certificate, index) => (
+                    <li
+                      key={index}
+                      className='flex items-center gap-4 cursor-pointer'
+                      onClick={() => window.open(certificate.link)}
+                    >
+                      <div className='bg-gradient-to-br shadow rounded-md flex items-center justify-center aspect-square w-12'>
+                        <AwardIcon className='w-6 h-6' />
                       </div>
-                      <div className='text-sm text-muted-foreground'>
-                        Issued May 2022 · Expires May 2025
+                      <div>
+                        <p className='font-semibold'>
+                          {certificate.title[language]}
+                        </p>
+                        <p className='text-sm text-muted-foreground'>
+                          {certificate.issuedAt[language]}
+                        </p>
                       </div>
-                    </div>
-                  </div>
-                  <div className='flex items-center gap-4'>
-                    <div className='bg-gradient-to-br shadow rounded-md flex items-center justify-center aspect-square w-12'>
-                      <AwardIcon className='w-6 h-6' />
-                    </div>
-                    <div>
-                      <div className='font-semibold'>
-                        Google Cloud Certified Professional Data Engineer
-                      </div>
-                      <div className='text-sm text-muted-foreground'>
-                        Issued September 2021 · Expires September 2024
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </TabsContent>
           </Tabs>
@@ -352,26 +251,6 @@ function CalendarDaysIcon(props: any) {
       <path d='M8 18h.01' />
       <path d='M12 18h.01' />
       <path d='M16 18h.01' />
-    </svg>
-  );
-}
-
-function LinkIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    >
-      <path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71' />
-      <path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71' />
     </svg>
   );
 }
