@@ -23,6 +23,7 @@ type LabelType = {
     media: { [key: string]: string };
   };
   certificationsDescription: { [key: string]: string };
+  close: { [key: string]: string };
 };
 
 export const labels: LabelType = {
@@ -98,5 +99,10 @@ export const labels: LabelType = {
     en: 'Here are some of the certifications I have earned.',
     es: 'Aquí hay algunas de las certificaciones que he obtenido.',
     de: 'Hier sind einige der Zertifikate, die ich erworben habe.',
+  },
+  close: {
+    en: 'Close',
+    es: 'Cerrar',
+    de: 'Schließen',
   },
 };

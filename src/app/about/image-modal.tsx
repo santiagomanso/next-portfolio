@@ -20,8 +20,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
-import { MediaInterface } from '../data/media';
+
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { labels, MediaInterface } from '../data';
 
 interface Props {
   item: MediaInterface;
@@ -69,7 +70,7 @@ export function ImageModal({ item, language }: Props) {
           className='rounded-lg bg-slate-500 w-full p-[1px] aspect-video cursor-pointer md:w-5/6 object-cover'
         />
       </DrawerTrigger>
-      <DrawerContent className='max-h-[80%]'>
+      <DrawerContent className='max-h-[80%] dark:bg-neutral-900'>
         <DrawerHeader className='text-left'>
           <DrawerTitle>{item.alt[language]}</DrawerTitle>
           <DrawerDescription>{item.description[language]}</DrawerDescription>
@@ -79,7 +80,12 @@ export function ImageModal({ item, language }: Props) {
         </figure>
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>
-            <Button variant='outline'>Cancel</Button>
+            <Button
+              variant='outline'
+              className='bg-gradient-to-br border-gray-500/30  from-neutral-300 to-neutral-300 dark:from-neutral-800 dark:to-stone-950 dark:border-stone-800'
+            >
+              {labels.close[language]}
+            </Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>

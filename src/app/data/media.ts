@@ -29,22 +29,22 @@ export const mediaData: MediaInterface[] = [
       de: 'Flutter Kon. ',
     },
     description: {
-      en: 'Flutter conference in Berlin 2023 04/05/2023, may the fourth be with you.',
-      es: 'Conferencia de Flutter en Berlín 04/05/2023, que la fuerza te acompañe.',
-      de: 'Flutter-Konferenz in Berlin 04/05/2023, möge die vierte mit dir sein.',
+      en: 'Flutter conference in Berlin 2023 04/05/2023, may the fourth be with you. 🍿',
+      es: 'Conferencia de Flutter en Berlín 04/05/2023, que la fuerza te acompañe. 🍿',
+      de: 'Flutter-Konferenz in Berlin 04/05/2023, möge die vierte mit dir sein. 🍿',
     },
   },
   {
     image: Assets.Images.Media3,
     alt: {
-      en: 'React Berlin Meeting. ⚛️',
-      es: 'Reunión de React en Berlín. ⚛️',
-      de: 'React Berlin Meeting. ⚛️',
+      en: 'React Berlin Meeting.',
+      es: 'Reunión de React en Berlín.',
+      de: 'React Berlin Meeting.',
     },
     description: {
-      en: 'React Meeting, introducing new hook "use".',
-      es: 'Reunión de React, presentando el nuevo hook "use".',
-      de: 'React Meeting, Einführung des neuen Hooks "use".',
+      en: 'React Meeting, introducing new hook "use". ⚛️',
+      es: 'Reunión de React, presentando el nuevo hook "use". ⚛️',
+      de: 'React Meeting, Einführung des neuen Hooks "use". ⚛️',
     },
   },
   {

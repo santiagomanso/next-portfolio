@@ -4,14 +4,12 @@ import Image from 'next/image';
 import { AwardIcon, LayoutGrid } from 'lucide-react';
 
 import { Assets } from '@/assets';
-import { labels } from '../data/labels';
-import { mediaData } from '../data/media';
 import { ImageModal } from './image-modal';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Container from '@/components/container';
-import { CertificatesData } from '../data/certificates';
 import { LanguageContext } from '@/context/LanguageContext';
+import { certificatesData, labels, mediaData } from '../data';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 export default function About() {
@@ -198,7 +196,7 @@ export default function About() {
                   </p>
                 </div>
                 <ul className='grid gap-4'>
-                  {CertificatesData.map((certificate, index) => (
+                  {certificatesData.map((certificate, index) => (
                     <li
                       key={index}
                       className='flex items-center gap-4 cursor-pointer'

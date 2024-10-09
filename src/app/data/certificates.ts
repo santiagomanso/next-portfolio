@@ -6,7 +6,7 @@ export interface CertificateInterface {
   link: string;
 }
 
-export const CertificatesData: CertificateInterface[] = [
+export const certificatesData: CertificateInterface[] = [
   {
     title: {
       en: 'TypeScript Essential Training',
