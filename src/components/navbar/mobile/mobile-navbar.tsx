@@ -83,6 +83,12 @@ export default function MobileNavbar({
     const formattedLocation = location.startsWith('/')
       ? location.slice(1)
       : location;
+
+    // If the location starts with "portfolio", return "Portfolio" (translated)
+    if (formattedLocation.startsWith('portfolio')) {
+      return labels.portfolio[language];
+    }
+
     const locationKey = formattedLocation.toLowerCase();
 
     // Type guard to check if locationKey is a valid key of Label
@@ -100,13 +106,19 @@ export default function MobileNavbar({
     }
   }
 
-  const handleGoBack = React.useCallback(() => {
-    if (path) {
-      router.push(path);
+  // Function to handle back navigation
+  const handleBackNavigation = () => {
+    if (location === '/portfolio') {
+      // If you're on the main portfolio page, go to the homepage
+      router.push('/');
+    } else if (location.startsWith('/portfolio')) {
+      // If you're in any portfolio detail, go to the portfolio page
+      router.push('/portfolio');
     } else {
-      router.back();
+      // Otherwise, go to the homepage
+      router.push('/');
     }
-  }, [path, router]);
+  };
 
   return (
     <div
@@ -120,7 +132,7 @@ export default function MobileNavbar({
       <Button
         variant='ghost'
         className='p-0  focus:bg-transparent'
-        onClick={() => router.push('/')}
+        onClick={handleBackNavigation}
       >
         <Assets.Icons.ArrowLeft
           className='dark:fill-white'

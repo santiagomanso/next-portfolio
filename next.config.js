@@ -6,6 +6,7 @@ const nextConfig = {
       'media.licdn.com',
       'santimanso.com',
       'raw.githubusercontent.com',
+      'santimanso.netlify.app',
     ],
   },
   webpack(config) {

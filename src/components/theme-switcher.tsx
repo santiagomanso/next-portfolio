@@ -10,21 +10,25 @@ interface Props {
 }
 
 const ThemeSwitcher = ({ isResponsive, isClicked }: Props) => {
-  const { theme, setTheme } = useTheme();
-  const [resolvedTheme, setResolvedTheme] = React.useState<string>('');
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
   const handleClick = React.useCallback(() => {
-    return theme === 'dark' ? setTheme('light') : setTheme('dark');
-  }, [theme, setTheme]);
+    resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark');
+  }, [resolvedTheme, setTheme]);
 
   React.useEffect(() => {
-    theme && setResolvedTheme(theme);
-  }, [theme]);
+    setMounted(true); // Ensures that the theme is only applied after mounting
+  }, []);
 
   React.useEffect(() => {
-    handleClick();
+    if (isClicked) {
+      handleClick();
+    }
     //eslint-disable-next-line
   }, [isClicked]);
+
+  if (!mounted) return null; // Prevents the component from rendering until the theme is resolved
 
   return isResponsive ? (
     <div
