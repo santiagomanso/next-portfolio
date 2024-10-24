@@ -17,6 +17,38 @@ export interface Project {
   };
   urlDemo: string;
   urlCode: string;
+  mockup: {
+    desktop: {
+      img: string;
+      alt: { [index: string]: string; en: string; es: string; de: string };
+      description: {
+        [index: string]: string;
+        en: string;
+        es: string;
+        de: string;
+      };
+    };
+    tablet: {
+      img: string;
+      alt: { [index: string]: string; en: string; es: string; de: string };
+      description: {
+        [index: string]: string;
+        en: string;
+        es: string;
+        de: string;
+      };
+    };
+    mobile: {
+      img: string;
+      alt: { [index: string]: string; en: string; es: string; de: string };
+      description: {
+        [index: string]: string;
+        en: string;
+        es: string;
+        de: string;
+      };
+    };
+  };
   screenshots: string[];
   challenges?: string[];
   video?: string;
@@ -63,6 +95,9 @@ const deliveryFee2 = require('./screenshots/deliveryFee/deliveryFee2.png');
 const deliveryFee3 = require('./screenshots/deliveryFee/deliveryFee3.png');
 
 //rich simulator
+const richWeb = require('./screenshots/richSimulator/web.webp');
+const richTablet = require('./screenshots/richSimulator/tablet.webp');
+const richMobile = require('./screenshots/richSimulator/mobile.webp');
 const rich1 = require('./screenshots/richSimulator/rich1.png');
 const rich2 = require('./screenshots/richSimulator/rich2.png');
 const rich3 = require('./screenshots/richSimulator/rich3.png');
@@ -78,6 +113,43 @@ export const projectsArray: Project[] = [
     name: 'Rich Simulator',
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
+    mockup: {
+      desktop: {
+        img: richWeb,
+        alt: {
+          es: 'Rich Simulator',
+          de: 'Rich Simulator',
+          en: 'Rich Simulator',
+        },
+        description: { es: '', de: '', en: '' },
+      },
+      tablet: {
+        img: richTablet,
+        alt: {
+          es: 'Rich Simulator',
+          de: 'Rich Simulator',
+          en: 'Rich Simulator',
+        },
+        description: {
+          es: 'Menu desplegable, dos columnas y menu flotante en la parte inferior',
+          en: 'Dropdown menu, two columns and floating menu at the bottom',
+          de: 'Dropdown-Menü, zwei Spalten und schwebendes Menü unten',
+        },
+      },
+      mobile: {
+        img: richMobile,
+        alt: {
+          es: 'Rich Simulator',
+          de: 'Rich Simulator',
+          en: 'Rich Simulator',
+        },
+        description: {
+          es: 'Única columna, menu desplegable y menu flotante en la parte inferior',
+          de: 'Einzelspalte, Dropdown-Menü und schwebendes Menü unten',
+          en: 'Single column, dropdown menu and floating menu at the bottom',
+        },
+      },
+    },
     stack: [
       'multi language',
       'html',
@@ -136,6 +208,11 @@ export const projectsArray: Project[] = [
   {
     id: 4,
     img: mockupDelivery,
+    mockup: {
+      desktop: mockupDelivery,
+      tablet: mockupDelivery,
+      mobile: mockupDelivery,
+    },
     name: 'Delivery Fee calculator',
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
@@ -177,6 +254,11 @@ export const projectsArray: Project[] = [
   {
     id: 2,
     img: inventory,
+    mockup: {
+      desktop: inventory,
+      tablet: inventory,
+      mobile: inventory,
+    },
     name: 'Inventory Manager',
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
@@ -217,6 +299,11 @@ export const projectsArray: Project[] = [
   {
     id: 3,
     img: zombie,
+    mockup: {
+      desktop: zombie,
+      tablet: zombie,
+      mobile: zombie,
+    },
     name: 'Zombiemarkt',
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',

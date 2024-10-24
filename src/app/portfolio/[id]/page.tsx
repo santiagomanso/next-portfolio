@@ -1,15 +1,18 @@
 'use client';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { labels } from '../_data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Monitor, Smartphone, Tablet } from 'lucide-react';
+import { ChevronLeft, Monitor, Smartphone, Tablet } from 'lucide-react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { LanguageContext } from '@/context/LanguageContext';
 import { useContext } from 'react';
 import { projectsArray } from '../_data/projects';
-import { notFound } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
 import Container from '@/components/container';
+import { MediaInterface } from '@/app/data';
+import { ImageModal } from '@/components/image-modal';
 
 interface Props {
   params: { id: string };
@@ -20,6 +23,15 @@ export default function Page({ params }: Props) {
   const { language } = useContext(LanguageContext);
 
   const project = projectsArray.find((p) => p.id.toString() === id);
+  const router = useRouter();
+
+  const handleGoBack = React.useCallback(() => {
+    router.push('/portfolio');
+  }, [router]);
+
+  const handleClick = React.useCallback((url: string) => {
+    window.open(url, '_blank');
+  }, []);
 
   if (!project) {
     return notFound(); // Returns a 404 page if project not found
@@ -28,7 +40,14 @@ export default function Page({ params }: Props) {
   return (
     <Container background border padding='p-0'>
       <div className='container mx-auto px-4 py-8'>
-        <h1 className='text-3xl lg:text-5xl font-bold mb-6 font-primary text-gray-800 dark:text-white tracking-wide'>
+        <h1 className='text-3xl lg:flex lg:gap-2 lg:items-center lg:text-5xl font-bold mb-6 font-primary text-gray-800 dark:text-white tracking-wide'>
+          <Button
+            variant='ghost'
+            className='bg-transparent p-0 m-0 hidden lg:block'
+            onClick={handleGoBack}
+          >
+            <ChevronLeft className='h-10 w-10' />
+          </Button>
           {project.name}
         </h1>
 
@@ -49,10 +68,16 @@ export default function Page({ params }: Props) {
               ))}
             </ul>
             <div className='flex gap-5'>
-              <Button variant='secondary' className=''>
+              <Button
+                variant='secondary'
+                className=''
+                onClick={() => handleClick(project.urlCode)}
+              >
                 {labels.buttons.sourceCode[language]}
               </Button>
-              <Button>{labels.buttons.cta[language]}</Button>
+              <Button onClick={() => handleClick(project.urlDemo)}>
+                {labels.buttons.cta[language]}
+              </Button>
             </div>
           </div>
           <div>
@@ -69,30 +94,27 @@ export default function Page({ params }: Props) {
                 </TabsTrigger>
               </TabsList>
               <TabsContent className='h-[450px] ' value='desktop'>
-                <Image
-                  src='https://g-mqbvoufpguu.vusercontent.net/placeholder.svg'
-                  alt='Desktop Screenshot'
-                  height={300}
-                  width={300}
-                  className='rounded-lg shadow-lg max-h-[400px] h-full w-full'
+                <ImageModal
+                  alt={project.mockup.desktop.alt}
+                  description={project.mockup.desktop.description}
+                  img={project.mockup.desktop.img}
+                  language={language}
                 />
               </TabsContent>
               <TabsContent className='h-[450px] ' value='tablet'>
-                <Image
-                  src='https://g-mqbvoufpguu.vusercontent.net/placeholder.svg'
-                  alt='Tablet Screenshot'
-                  height={300}
-                  width={300}
-                  className='rounded-lg shadow-lg max-h-[400px] h-full w-full'
+                <ImageModal
+                  alt={project.mockup.tablet.alt}
+                  description={project.mockup.tablet.description}
+                  img={project.mockup.tablet.img}
+                  language={language}
                 />
               </TabsContent>
               <TabsContent className='h-[450px] ' value='mobile'>
-                <Image
-                  src='https://g-mqbvoufpguu.vusercontent.net/placeholder.svg'
-                  alt='Mobile Screenshot'
-                  height={300}
-                  width={300}
-                  className='rounded-lg shadow-lg mx-auto max-h-[400px] h-full w-full'
+                <ImageModal
+                  alt={project.mockup.mobile.alt}
+                  description={project.mockup.mobile.description}
+                  img={project.mockup.mobile.img}
+                  language={language}
                 />
               </TabsContent>
             </Tabs>

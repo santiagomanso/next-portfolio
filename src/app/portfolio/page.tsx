@@ -41,15 +41,12 @@ export default function Page() {
               />
             )}
 
-            <div className='bg-gradient-to-b from-transparent to-black w-full h-full absolute bottom-0 translate-y-full transition-all ease-in-out duration-1000 group-hover:-translate-y-0 flex flex-col items-center p-4 justify-end gap-2 md:gap-3'>
-              <p className='bg-black/90 text-white text-sm md:text-base truncate lg:overflow-visible lg:whitespace-normal lg:truncate-none w-full'>
-                {project.descriptionShort[language]}
-              </p>
+            <div className='bg-gradient-to-b from-transparent to-black w-full h-full absolute bottom-0 translate-y-full transition-all ease-in-out duration-1000 group-hover:-translate-y-0 flex  items-end p-4 justify-end gap-2 md:gap-3'>
               <Link
                 href={`/portfolio/${project.id}`}
-                className='text-gray-100 tracking-widest dark:border-stone-600 font-bold bg-gradient-to-br from-transparent to-transparent dark:from-transparent dark:to-transparent dark:transparent dark:text-white rounded border text-base px-3 md:px-3 md:py-1'
+                className='text-white text-sm md:text-base truncate lg:overflow-visible lg:whitespace-normal lg:truncate-none w-full'
               >
-                {labels.seeMore[language]}
+                {project.descriptionShort[language]} {labels.seeMore[language]}
               </Link>
             </div>
           </article>

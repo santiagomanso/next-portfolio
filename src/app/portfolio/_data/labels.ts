@@ -19,9 +19,9 @@ interface Labels {
 
 export const labels: Labels = {
   seeMore: {
-    en: 'See More',
-    es: 'Ver Más',
-    de: 'Mehr Sehen',
+    en: 'See More...',
+    es: 'Ver Más...',
+    de: 'Mehr Sehen...',
   },
   tabTriggers: {
     description: {
