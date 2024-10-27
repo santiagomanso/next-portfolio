@@ -81,29 +81,26 @@ const zombie5 =
   'https://raw.githubusercontent.com/santiagomanso/ZombieMarkt/main/server/createOrder%20flowchart.jpg';
 const zombie6 =
   'https://raw.githubusercontent.com/santiagomanso/ZombieMarkt/main/FlowChart-Google-Oauth-20.drawio.png';
+const zombieDesktop = require('./screenshots/zombiemarkt/desktop.webp');
+const zombieTablet = require('./screenshots/zombiemarkt/tablet.webp');
+const zombieMobile = require('./screenshots/zombiemarkt/mobile.webp');
 
 //inventory manager
-const inventory1 = require('./screenshots/inventoryManager/inventoryManager1.png');
-const inventory2 = require('./screenshots/inventoryManager/inventoryManager2.png');
-const inventory3 = require('./screenshots/inventoryManager/inventoryManager3.png');
 const challengeInv1 =
   'https://raw.githubusercontent.com/santiagomanso/ZombieMarkt/main/inventory-manager/src/assets/debouncedFlowchart.png';
+const inventoryDesktop = require('./screenshots/inventoryManager/desktop.webp');
+const inventoryTablet = require('./screenshots/inventoryManager/tablet.webp');
+const inventoryMobile = require('./screenshots/inventoryManager/mobile.webp');
 
 //deliveryFee
-const deliveryFee1 = require('./screenshots/deliveryFee/deliveryFee1.png');
-const deliveryFee2 = require('./screenshots/deliveryFee/deliveryFee2.png');
-const deliveryFee3 = require('./screenshots/deliveryFee/deliveryFee3.png');
+const deliveryDesktop = require('./screenshots/deliveryFee/desktop.webp');
+const deliveryTablet = require('./screenshots/deliveryFee/tablet.webp');
+const deliveryMobile = require('./screenshots/deliveryFee/mobile.webp');
 
 //rich simulator
 const richWeb = require('./screenshots/richSimulator/web.webp');
 const richTablet = require('./screenshots/richSimulator/tablet.webp');
 const richMobile = require('./screenshots/richSimulator/mobile.webp');
-const rich1 = require('./screenshots/richSimulator/rich1.png');
-const rich2 = require('./screenshots/richSimulator/rich2.png');
-const rich3 = require('./screenshots/richSimulator/rich3.png');
-const rich4 = require('./screenshots/richSimulator/rich4.png');
-const challengeRich1 =
-  'https://raw.githubusercontent.com/santiagomanso/rich-commerce/5371bcf0d82815e2879c48734e66b468210edcea/src/components/carousel/carousel.png';
 
 //array of projects to feed ProjectList and modal components
 export const projectsArray: Project[] = [
@@ -166,6 +163,8 @@ export const projectsArray: Project[] = [
         'simulador de compras',
         'API top 10 billonarios',
         'E-Commerce',
+        'Tema oscuro y claro',
+        'Autenticación',
       ],
       en: [
         'guest account',
@@ -174,6 +173,8 @@ export const projectsArray: Project[] = [
         'shopping simulator',
         'top 10 billionaires API',
         'E-Commerce',
+        'Dark and light theme',
+        'Authentication',
       ],
       de: [
         'Gastkonto',
@@ -182,6 +183,8 @@ export const projectsArray: Project[] = [
         'Einkaufssimulator',
         'Top 10 Milliardäre API',
         'E-Commerce',
+        'Dunkles und helles Thema',
+        'Authentifizierung',
       ],
     },
     description: {
@@ -196,8 +199,13 @@ export const projectsArray: Project[] = [
     },
     urlDemo: 'https://rich-simulator.netlify.app/',
     urlCode: 'https://github.com/santiagomanso/rich-commerce',
-    screenshots: [rich1, rich2, rich3, rich4],
-    challenges: [challengeRich1],
+    screenshots: [
+      '/screenshots/richSimulator/1.png',
+      '/screenshots/richSimulator/2.png',
+      '/screenshots/richSimulator/3.png',
+      '/screenshots/richSimulator/4.png',
+    ],
+    challenges: ['/screenshots/richSimulator/challenge1.png'],
     video: 'WN44D_yQlXI',
 
     colSpan: 'col-span-1 md:col-span-7',
@@ -209,9 +217,33 @@ export const projectsArray: Project[] = [
     id: 4,
     img: mockupDelivery,
     mockup: {
-      desktop: mockupDelivery,
-      tablet: mockupDelivery,
-      mobile: mockupDelivery,
+      desktop: {
+        img: deliveryDesktop,
+        alt: {
+          es: 'Delivery Fee Calculator',
+          en: 'Delivery Fee Calculator',
+          de: 'Delivery Fee Calculator',
+        },
+        description: { es: '', en: '', de: '' },
+      },
+      tablet: {
+        img: deliveryTablet,
+        alt: {
+          es: 'Delivery Fee Calculator',
+          en: 'Delivery Fee Calculator',
+          de: 'Delivery Fee Calculator',
+        },
+        description: { es: '', en: '', de: '' },
+      },
+      mobile: {
+        img: deliveryMobile,
+        alt: {
+          es: 'Delivery Fee Calculator',
+          en: 'Delivery Fee Calculator',
+          de: 'Delivery Fee Calculator',
+        },
+        description: { es: '', en: '', de: '' },
+      },
     },
     name: 'Delivery Fee calculator',
     topBg: 'bg-black/40 dark:bg-black/70',
@@ -243,7 +275,11 @@ export const projectsArray: Project[] = [
     },
     urlDemo: 'https://deliveryfee.netlify.app/',
     urlCode: 'https://github.com/santiagomanso/delivery-fee-calculator',
-    screenshots: [deliveryFee1, deliveryFee2, deliveryFee3],
+    screenshots: [
+      '/screenshots/deliveryFee/1.png',
+      '/screenshots/deliveryFee/2.png',
+      '/screenshots/deliveryFee/3.png',
+    ],
     // challenges: [],
 
     colSpan: 'col-span-1 md:col-span-4',
@@ -255,9 +291,33 @@ export const projectsArray: Project[] = [
     id: 2,
     img: inventory,
     mockup: {
-      desktop: inventory,
-      tablet: inventory,
-      mobile: inventory,
+      desktop: {
+        img: inventoryDesktop,
+        alt: {
+          es: 'Inventory Manager',
+          en: 'Inventory Manager',
+          de: 'Inventory Manager',
+        },
+        description: { es: '', en: '', de: '' },
+      },
+      tablet: {
+        img: inventoryTablet,
+        alt: {
+          es: 'Inventory Manager',
+          en: 'Inventory Manager',
+          de: 'Inventory Manager',
+        },
+        description: { es: '', en: '', de: '' },
+      },
+      mobile: {
+        img: inventoryMobile,
+        alt: {
+          es: 'Inventory Manager',
+          en: 'Inventory Manager',
+          de: 'Inventory Manager',
+        },
+        description: { es: '', en: '', de: '' },
+      },
     },
     name: 'Inventory Manager',
     topBg: 'bg-black/40 dark:bg-black/70',
@@ -288,7 +348,11 @@ export const projectsArray: Project[] = [
     },
     urlDemo: 'https://zombie-markt-gswm.vercel.app/',
     urlCode: 'https://github.com/santiagomanso/ZombieMarkt',
-    screenshots: [inventory1, inventory2, inventory3],
+    screenshots: [
+      '/screenshots/inventoryManager/1.png',
+      '/screenshots/inventoryManager/2.png',
+      '/screenshots/inventoryManager/3.png',
+    ],
     challenges: [challengeInv1],
 
     colSpan: 'col-span-1 md:col-span-4',
@@ -300,9 +364,21 @@ export const projectsArray: Project[] = [
     id: 3,
     img: zombie,
     mockup: {
-      desktop: zombie,
-      tablet: zombie,
-      mobile: zombie,
+      desktop: {
+        img: zombieDesktop,
+        alt: { es: '', en: '', de: '' },
+        description: { es: '', en: '', de: '' },
+      },
+      tablet: {
+        img: zombieTablet,
+        alt: { es: '', en: '', de: '' },
+        description: { es: '', en: '', de: '' },
+      },
+      mobile: {
+        img: zombieMobile,
+        alt: { es: '', en: '', de: '' },
+        description: { es: '', en: '', de: '' },
+      },
     },
     name: 'Zombiemarkt',
     topBg: 'bg-black/40 dark:bg-black/70',
@@ -334,7 +410,11 @@ export const projectsArray: Project[] = [
     video: 'FBpk9-WpLDE',
     urlDemo: 'https://zombie-markt-fj2k.vercel.app/',
     urlCode: 'https://github.com/santiagomanso/ZombieMarkt',
-    screenshots: [zombie1, zombie2, zombie3],
+    screenshots: [
+      '/screenshots/zombiemarkt/1.png',
+      '/screenshots/zombiemarkt/2.png',
+      '/screenshots/zombiemarkt/3.png',
+    ],
     challenges: [zombie4, zombie5, zombie6],
     colSpan: 'col-span-1 md:col-span-7',
     rowSpan: 'row-span-1',

@@ -15,6 +15,7 @@ interface Labels {
     sourceCode: { [key: string]: string };
   };
   challengesAndSolutions: { [key: string]: string };
+  imageGallery: { [key: string]: string };
 }
 
 export const labels: Labels = {
@@ -81,5 +82,10 @@ export const labels: Labels = {
     en: 'Challenges and Solutions',
     es: 'Desafíos y Soluciones',
     de: 'Herausforderungen und Lösungen',
+  },
+  imageGallery: {
+    en: 'Image Gallery',
+    es: 'Galería de Imágenes',
+    de: 'Bildergalerie',
   },
 };

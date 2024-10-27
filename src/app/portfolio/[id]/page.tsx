@@ -13,6 +13,7 @@ import { notFound, useRouter } from 'next/navigation';
 import Container from '@/components/container';
 import { MediaInterface } from '@/app/data';
 import { ImageModal } from '@/components/image-modal';
+import ImageGallery from './_components/image-gallery';
 
 interface Props {
   params: { id: string };
@@ -51,7 +52,7 @@ export default function Page({ params }: Props) {
           {project.name}
         </h1>
 
-        <div className='grid md:grid-cols-2 gap-8 mb-12'>
+        <div className='grid md:grid-cols-2 gap-8 mb-0 '>
           <div>
             <h2 className='text-2xl font-semibold mb-4'>
               {labels.tabTriggers.description[language]}
@@ -62,7 +63,7 @@ export default function Page({ params }: Props) {
             <h3 className='text-xl font-semibold mb-2'>
               {labels.keyFeatures[language]}:
             </h3>
-            <ul className='list-disc list-inside text-muted-foreground mb-4'>
+            <ul className='list-disc list-inside text-muted-foreground mb-4 grid grid-cols-2'>
               {project.keyFeatures[language].map((feature) => (
                 <li key={feature}>{feature}</li>
               ))}
@@ -121,29 +122,19 @@ export default function Page({ params }: Props) {
           </div>
         </div>
 
-        <div className='mb-12'>
-          <h2 className='text-2xl font-semibold mb-4'>
-            {labels.challengesAndSolutions[language]}
-          </h2>
-          <Card>
-            <CardContent className='p-6'>
-              <h3 className='text-xl font-semibold mb-2'>
-                Challenge 1: Real-time Synchronization
-              </h3>
-              <p className='text-muted-foreground mb-4'>
-                Implementing real-time updates across multiple clients proved
-                challenging due to race conditions and data consistency issues.
-              </p>
-              <h4 className='font-semibold mb-2'>Solution:</h4>
-              <p className='text-muted-foreground mb-4'>
-                We implemented a robust WebSocket architecture with a custom
-                conflict resolution algorithm. This ensured that all clients
-                remained in sync while providing a smooth user experience, even
-                under high concurrency scenarios.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+        {project.screenshots && (
+          <div className='mb-4'>
+            <h2 className='text-2xl font-semibold mb-4'>
+              {labels.imageGallery[language]}
+            </h2>
+            <ImageGallery
+              images={[
+                ...project.screenshots,
+                ...(project.challenges ? project.challenges : []),
+              ]}
+            />
+          </div>
+        )}
 
         <div className='mb-12'>
           <h2 className='text-2xl font-semibold mb-4'>Project Demo Video</h2>
