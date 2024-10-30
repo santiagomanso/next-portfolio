@@ -42,6 +42,7 @@ const Container = ({
     >
       {withImage && (
         <Image
+          placeholder='blur'
           src={Assets.Images.SantiBG}
           alt='santi'
           className='animate-fade-left absolute bottom-0 right-0 w-[10%] hidden lg:block drop-shadow-[0_35px_35px_rgba(107,114,128,0.7)] dark:drop-shadow-[0_35px_35px_rgba(229,231,235,0.1)]'

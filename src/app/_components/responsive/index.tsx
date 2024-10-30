@@ -20,6 +20,7 @@ export default function ResponsiveHome() {
       <article className='border-[1px] relative dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg  col-span-3 row-span-2 flex flex-col justify-center overflow-hidden'>
         <TypeWritter />
         <Image
+          placeholder='blur'
           alt='santi'
           src={Assets.Images.SantiBG}
           className='absolute -bottom-5 drop-shadow-[0_35px_35px_rgba(107,114,128,0.7)] dark:drop-shadow-[0_35px_35px_rgba(229,231,235,0.3)] right-0 w-1/5 z-0'
