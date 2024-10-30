@@ -30,6 +30,7 @@ export default function PortfolioLink() {
   return (
     <Link
       href='/portfolio'
+      aria-label='Go to portfolio page'
       className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg   row-span-2'
     >
       <div className='flex flex-col text-center justify-center items-center gap-0 h-full '>

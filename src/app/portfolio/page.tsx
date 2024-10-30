@@ -43,6 +43,7 @@ export default function Page() {
 
             <div className='bg-gradient-to-b from-transparent to-black w-full h-full absolute bottom-0 translate-y-full transition-all ease-in-out duration-1000 group-hover:-translate-y-0 flex  items-end p-4 justify-end gap-2 md:gap-3'>
               <Link
+                aria-label="Go to project's detail page"
                 href={`/portfolio/${project.id}`}
                 className='text-white text-sm md:text-base truncate lg:overflow-visible lg:whitespace-normal lg:truncate-none w-full'
               >

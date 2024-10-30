@@ -1,7 +1,7 @@
-import { Assets } from '@/assets';
-import { LanguageContext } from '@/context/LanguageContext';
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+
+import { LanguageContext } from '@/context/LanguageContext';
 
 type LabelType = {
   [key: string]: string;
@@ -18,6 +18,7 @@ export default function About() {
   return (
     <Link
       href='/about'
+      aria-label='Go to the about me page'
       className='w-full h-full flex flex-col items-center justify-center text-center gap-1'
     >
       <p

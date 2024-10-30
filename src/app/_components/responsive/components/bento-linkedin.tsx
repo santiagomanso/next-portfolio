@@ -6,6 +6,7 @@ export default function LinkedInLink() {
       href='https://www.linkedin.com/in/santimanso/'
       target='_blank'
       rel='noreferrer'
+      aria-label="Go to Santiago's LinkedIn profile"
       className='border-[1px]  dark:bg-transparent border-sky-900 dark:border-gray-400/60 rounded-lg relative z-0'
     >
       <p className='hidden'>linkedin</p>

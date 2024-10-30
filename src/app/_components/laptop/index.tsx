@@ -54,12 +54,14 @@ export default function LaptopHome() {
 
       <div className='flex justify-between gap-5 '>
         <Link
+          aria-label='Go to the projects page'
           href='/portfolio'
           className={`border-gray-300/90   animate-ease-out text-center text-xl lg:text-2xl dark:bg-neutral-800 text-gray-500 dark:text-gray-300 dark:hover:shadow-gray-700 tracking-wider  w-1/2  border-[1px] dark:border-neutral-900 ease-in-out px-8 py-2 rounded-sm select-none hover:shadow-md hover:shadow-gray-500 shadow-md dark:hover:shadow-lg hover:-translate-y-[0.15rem] transition-all duration-150  lg:active:translate-y-4 min-w-[270px]`}
         >
           {text.projects[language]}
         </Link>
         <Link
+          aria-label='Go to the experience page'
           href='/experience'
           className={`border-gray-300/90   animate-ease-out text-center text-xl lg:text-2xl bg-gradient-to-br dark:text-gray-300 dark:from-purple-600 dark:to-violet-950 from-white hover:shadow-md hover:shadow-gray-500 to-slate-300 tracking-wider  w-1/2 ease-in-out px-8 py-2 rounded-sm select-none border-[1px] text-gray-500 dark:border-purple-950 shadow-md dark:hovershadow-violet-600 dark:hover:shadow-violet-500 dark:hover:shadow-lg hover:-translate-y-[0.15rem] transition-all duration-150  lg:active:translate-y-3 min-w-[270px]`}
         >
