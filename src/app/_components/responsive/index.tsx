@@ -21,7 +21,7 @@ export default function ResponsiveHome() {
         <TypeWritter />
         <Image
           alt='santi'
-          src={Assets.Images.Santi2}
+          src={Assets.Images.SantiBG}
           className='absolute -bottom-5 drop-shadow-[0_35px_35px_rgba(107,114,128,0.7)] dark:drop-shadow-[0_35px_35px_rgba(229,231,235,0.3)] right-0 w-1/5 z-0'
         />
       </article>
