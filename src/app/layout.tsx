@@ -41,6 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html
+      lang='en'
       suppressHydrationWarning
       className={` ${staatliches.variable} ${inter.variable} ${inconsolata.variable} `}
     >
