@@ -13,6 +13,7 @@ import NavigationProvider from '@/context/navigation-context';
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yourwebsite.com'), // Replace with your actual website URL
   title:
     'Santiago Manso Castro | Web Developer | JavaScript | TypeScript | React | Next.js',
   description: 'Portfolio website',
@@ -20,10 +21,10 @@ export const metadata: Metadata = {
     title: 'Santiago Manso Castro | Web Developer',
     description:
       'Portfolio website showcasing work in JavaScript, TypeScript, React, and Next.js',
-    url: 'https://santimanso.com', //  website URL
+    url: 'https://yourwebsite.com', // Replace with your actual website URL
     images: [
       {
-        url: '/screenshots/og/og.png',
+        url: '/screenshots/og/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Santiago Manso Castro Portfolio OG Image',
