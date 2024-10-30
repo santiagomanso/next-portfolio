@@ -2,7 +2,15 @@ export interface Project {
   id: number;
   img: string;
   name: string;
-  stack: string[];
+  stack: {
+    name: string;
+    description: {
+      [index: string]: string;
+      en: string;
+      es: string;
+      de: string;
+    };
+  }[];
   description: {
     [index: string]: string;
     en: string;
@@ -148,12 +156,70 @@ export const projectsArray: Project[] = [
       },
     },
     stack: [
-      'multi language',
-      'html',
-      'css',
-      'javascript',
-      'react',
-      'guest account',
+      {
+        name: 'Multi-language support',
+        description: {
+          en: 'Supports multiple languages',
+          es: 'Soporta múltiples idiomas',
+          de: 'Unterstützt mehrere Sprachen',
+        },
+      },
+      {
+        name: 'HTML',
+        description: {
+          en: 'Markup language for creating web pages',
+          es: 'Lenguaje de marcado para crear páginas web',
+          de: 'Markup-Sprache zur Erstellung von Webseiten',
+        },
+      },
+      {
+        name: 'CSS',
+        description: {
+          en: 'Style sheet language for designing web pages',
+          es: 'Lenguaje de hojas de estilo para diseñar páginas web',
+          de: 'Stylesheet-Sprache für das Design von Webseiten',
+        },
+      },
+      {
+        name: 'JavaScript',
+        description: {
+          en: 'Programming language used for web development',
+          es: 'Lenguaje de programación utilizado para desarrollo web',
+          de: 'Programmiersprache für die Webentwicklung',
+        },
+      },
+      {
+        name: 'React',
+        description: {
+          en: 'JavaScript library for building user interfaces',
+          es: 'Biblioteca de JavaScript para construir interfaces de usuario',
+          de: 'JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen',
+        },
+      },
+      {
+        name: 'Guest Account',
+        description: {
+          en: 'Allows access to the app without user registration',
+          es: 'Permite acceso a la app sin registro de usuario',
+          de: 'Ermöglicht den Zugriff auf die App ohne Registrierung',
+        },
+      },
+      {
+        name: 'Git',
+        description: {
+          en: 'Version control system for tracking code changes',
+          es: 'Sistema de control de versiones para rastrear cambios en el código',
+          de: 'Versionskontrollsystem zur Verfolgung von Code-Änderungen',
+        },
+      },
+      {
+        name: 'GitHub',
+        description: {
+          en: 'Platform for hosting and sharing code repositories',
+          es: 'Plataforma para alojar y compartir repositorios de código',
+          de: 'Plattform zum Hosten und Teilen von Code-Repositories',
+        },
+      },
     ],
     keyFeatures: {
       es: [
@@ -249,14 +315,70 @@ export const projectsArray: Project[] = [
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
     stack: [
-      'multi language',
-      'typescript',
-      'javascript',
-      'HTML',
-      'CSS',
-      'tailwind css',
-      'react',
-      'css',
+      {
+        name: 'TypeScript',
+        description: {
+          en: 'Typed superset of JavaScript for scalable applications',
+          es: 'Superconjunto tipado de JavaScript para aplicaciones escalables',
+          de: 'Getypte Obermenge von JavaScript für skalierbare Anwendungen',
+        },
+      },
+      {
+        name: 'JavaScript',
+        description: {
+          en: 'Programming language used for web development',
+          es: 'Lenguaje de programación utilizado para desarrollo web',
+          de: 'Programmiersprache für die Webentwicklung',
+        },
+      },
+      {
+        name: 'HTML',
+        description: {
+          en: 'Markup language for creating web pages',
+          es: 'Lenguaje de marcado para crear páginas web',
+          de: 'Markup-Sprache zur Erstellung von Webseiten',
+        },
+      },
+      {
+        name: 'CSS',
+        description: {
+          en: 'Style sheet language for designing web pages',
+          es: 'Lenguaje de hojas de estilo para diseñar páginas web',
+          de: 'Stylesheet-Sprache für das Design von Webseiten',
+        },
+      },
+      {
+        name: 'Tailwind CSS',
+        description: {
+          en: 'Utility-first CSS framework for rapid UI development',
+          es: 'Framework CSS utility-first para desarrollo rápido de UI',
+          de: 'Utility-First-CSS-Framework für schnelle UI-Entwicklung',
+        },
+      },
+      {
+        name: 'React',
+        description: {
+          en: 'JavaScript library for building user interfaces',
+          es: 'Biblioteca de JavaScript para construir interfaces de usuario',
+          de: 'JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen',
+        },
+      },
+      {
+        name: 'Git',
+        description: {
+          en: 'Version control system for tracking code changes',
+          es: 'Sistema de control de versiones para rastrear cambios en el código',
+          de: 'Versionskontrollsystem zur Verfolgung von Code-Änderungen',
+        },
+      },
+      {
+        name: 'GitHub',
+        description: {
+          en: 'Platform for hosting and sharing code repositories',
+          es: 'Plataforma para alojar y compartir repositorios de código',
+          de: 'Plattform zum Hosten und Teilen von Code-Repositories',
+        },
+      },
     ],
     keyFeatures: {
       es: [''],
@@ -323,18 +445,101 @@ export const projectsArray: Project[] = [
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
     stack: [
-      'tailwind css',
-      'fullstack',
-      'html',
-      'react',
-      'mongo db',
-      'express',
-      'node js',
+      {
+        name: 'Tailwind CSS',
+        description: {
+          en: 'Utility-first CSS framework for rapid UI development',
+          es: 'Framework CSS utility-first para desarrollo rápido de UI',
+          de: 'Utility-First-CSS-Framework für schnelle UI-Entwicklung',
+        },
+      },
+      {
+        name: 'Fullstack',
+        description: {
+          en: 'Full-stack development covering frontend and backend',
+          es: 'Desarrollo full-stack que cubre frontend y backend',
+          de: 'Fullstack-Entwicklung für Frontend und Backend',
+        },
+      },
+      {
+        name: 'HTML',
+        description: {
+          en: 'Markup language for creating web pages',
+          es: 'Lenguaje de marcado para crear páginas web',
+          de: 'Markup-Sprache zur Erstellung von Webseiten',
+        },
+      },
+      {
+        name: 'React',
+        description: {
+          en: 'JavaScript library for building user interfaces',
+          es: 'Biblioteca de JavaScript para construir interfaces de usuario',
+          de: 'JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen',
+        },
+      },
+      {
+        name: 'MongoDB',
+        description: {
+          en: 'NoSQL database for scalable, high-performance data storage',
+          es: 'Base de datos NoSQL para almacenamiento de datos escalable y de alto rendimiento',
+          de: 'NoSQL-Datenbank für skalierbare, leistungsstarke Datenspeicherung',
+        },
+      },
+      {
+        name: 'Express',
+        description: {
+          en: 'Web application framework for Node.js',
+          es: 'Framework de aplicaciones web para Node.js',
+          de: 'Webanwendungs-Framework für Node.js',
+        },
+      },
+      {
+        name: 'Node.js',
+        description: {
+          en: 'JavaScript runtime environment for server-side applications',
+          es: 'Entorno de ejecución de JavaScript para aplicaciones del lado del servidor',
+          de: 'JavaScript-Laufzeitumgebung für serverseitige Anwendungen',
+        },
+      },
+      {
+        name: 'Git',
+        description: {
+          en: 'Version control system for tracking code changes',
+          es: 'Sistema de control de versiones para rastrear cambios en el código',
+          de: 'Versionskontrollsystem zur Verfolgung von Code-Änderungen',
+        },
+      },
+      {
+        name: 'GitHub',
+        description: {
+          en: 'Platform for hosting and sharing code repositories',
+          es: 'Plataforma para alojar y compartir repositorios de código',
+          de: 'Plattform zum Hosten und Teilen von Code-Repositories',
+        },
+      },
     ],
     keyFeatures: {
-      es: [''],
-      en: [''],
-      de: [''],
+      en: [
+        'Create, update, delete products and orders',
+        'Update product stock with a URL parameter',
+        'List all orders, users, products',
+        'Search for products by name or EAN',
+        'Handles the stock and orders for ZombieMarkt app',
+      ],
+      es: [
+        'Crear, actualizar, eliminar productos y pedidos',
+        'Actualizar stock de productos con un parámetro de URL',
+        'Listar todos los pedidos, usuarios y productos',
+        'Buscar productos por nombre o EAN',
+        'Maneja el stock y pedidos de la aplicación ZombieMarkt',
+      ],
+      de: [
+        'Erstellen, aktualisieren, löschen von Produkten und Bestellungen',
+        'Produktbestand mit einem URL-Parameter aktualisieren',
+        'Alle Bestellungen, Benutzer und Produkte auflisten',
+        'Produkte nach Name oder EAN suchen',
+        'Verwaltet den Bestand und die Bestellungen für die ZombieMarkt-App',
+      ],
     },
     description: {
       en: 'This is the application that a worker from the warehouse of the zombieMarkt e-commerce would use. The emplployee could inbound product (create / increase stock), outbound procuts (delete / descrease stock) as well as edit any product. I also included suport for the interviewer to see all users, all orders and all products. ',
@@ -384,18 +589,110 @@ export const projectsArray: Project[] = [
     topBg: 'bg-black/40 dark:bg-black/70',
     bottomBg: 'bg-black/40 dark:bg-black/70',
     stack: [
-      'fullstack',
-      'authentication',
-      'html',
-      'css',
-      'javascript',
-      'react',
-      'Tailwind Css',
+      {
+        name: 'Fullstack',
+        description: {
+          en: 'Full-stack development covering frontend and backend',
+          es: 'Desarrollo full-stack que cubre frontend y backend',
+          de: 'Fullstack-Entwicklung für Frontend und Backend',
+        },
+      },
+      {
+        name: 'Authentication',
+        description: {
+          en: 'Ensures secure user login and access control',
+          es: 'Garantiza un inicio de sesión seguro y control de acceso',
+          de: 'Sichert die Benutzeranmeldung und Zugangskontrolle',
+        },
+      },
+      {
+        name: 'HTML',
+        description: {
+          en: 'Markup language for creating web pages',
+          es: 'Lenguaje de marcado para crear páginas web',
+          de: 'Markup-Sprache zur Erstellung von Webseiten',
+        },
+      },
+      {
+        name: 'CSS',
+        description: {
+          en: 'Style sheet language for designing web pages',
+          es: 'Lenguaje de hojas de estilo para diseñar páginas web',
+          de: 'Stylesheet-Sprache für das Design von Webseiten',
+        },
+      },
+      {
+        name: 'JavaScript',
+        description: {
+          en: 'Programming language used for web development',
+          es: 'Lenguaje de programación utilizado para desarrollo web',
+          de: 'Programmiersprache für die Webentwicklung',
+        },
+      },
+      {
+        name: 'React',
+        description: {
+          en: 'JavaScript library for building user interfaces',
+          es: 'Biblioteca de JavaScript para construir interfaces de usuario',
+          de: 'JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen',
+        },
+      },
+      {
+        name: 'Tailwind CSS',
+        description: {
+          en: 'Utility-first CSS framework for rapid UI development',
+          es: 'Framework CSS utility-first para desarrollo rápido de UI',
+          de: 'Utility-First-CSS-Framework für schnelle UI-Entwicklung',
+        },
+      },
+      {
+        name: 'Git',
+        description: {
+          en: 'Version control system for tracking code changes',
+          es: 'Sistema de control de versiones para rastrear cambios en el código',
+          de: 'Versionskontrollsystem zur Verfolgung von Code-Änderungen',
+        },
+      },
+      {
+        name: 'GitHub',
+        description: {
+          en: 'Platform for hosting and sharing code repositories',
+          es: 'Plataforma para alojar y compartir repositorios de código',
+          de: 'Plattform zum Hosten und Teilen von Code-Repositories',
+        },
+      },
     ],
     keyFeatures: {
-      es: [''],
-      en: [''],
-      de: [''],
+      en: [
+        'Signup, signin logic',
+        'Persistent login after closing browser',
+        'Multi-language EN-ES-DE',
+        'AI-powered images',
+        'E-Commerce',
+        'Context API global state',
+        'Handmade animations',
+        'Connect to inventory manager to update when out of stock',
+      ],
+      es: [
+        'Lógica de registro e inicio de sesión',
+        'Inicio de sesión persistente al cerrar el navegador',
+        'Soporte multilenguaje EN-ES-DE',
+        'Imágenes generadas por IA',
+        'E-Commerce',
+        'Estado global con Context API',
+        'Animaciones hechas a mano',
+        'Conexión con el administrador de inventario para actualizar cuando esté fuera de stock',
+      ],
+      de: [
+        'Anmelde- und Login-Logik',
+        'Persistente Anmeldung nach Schließen des Browsers',
+        'Mehrsprachigkeit EN-ES-DE',
+        'KI-gesteuerte Bilder',
+        'E-Commerce',
+        'Globaler Zustand mit Context API',
+        'Handgemachte Animationen',
+        'Verbindung zum Inventar-Manager zur Aktualisierung bei Lagerbestand',
+      ],
     },
     description: {
       en: 'Humanity is on the verge of extinction, this is the last remaining online shopping platform, a supermarket store. Our drivers can overcome the wave of zombies and bring your products to your home safe and sound.This is one of three applications that makes e-commerce work, the purpose of this app is to register users, create orders and update the stock of products once the order is placed.',

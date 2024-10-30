@@ -54,7 +54,7 @@ export function ImageModal({ img, alt, language, description }: Props) {
             src={img}
             alt='Media 4'
             placeholder='blur'
-            className='max-h-[450px] object-scale-down shadow-lg cursor-pointer bg-gradient-to-br dark:from-current dark:to-stone-900 rounded-lg  dark:border-stone-700 border-stone-300'
+            className='max-h-[450px] object-scale-down shadow-lg cursor-pointer bg-gradient-to-br dark:from-current dark:to-stone-900 rounded-lg  dark:border-stone-700 border-stone-300 border'
           />
         </DialogTrigger>
         <DialogContent className='dark:bg-neutral-900 max-w-[1000px] max-h-[768px] w-fit h-fit text-start'>

@@ -84,6 +84,9 @@ const config = {
         primary: ['var(--font-Staatliches)'],
         secondary: ['var(--font-inter)'],
       },
+      transitionDuration: {
+        5000: '5000ms',
+      },
     },
   },
   plugins: [require('tailwindcss-animate'), require('tailwindcss-animated')],

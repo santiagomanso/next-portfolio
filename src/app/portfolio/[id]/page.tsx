@@ -71,26 +71,38 @@ export default function Page({ params }: Props) {
             <div className='flex gap-5'>
               <Button
                 variant='secondary'
-                className=''
+                className='border-gray-300/90   animate-ease-out text-center  dark:bg-neutral-800 text-gray-600 dark:text-gray-300 dark:hover:shadow-gray-700   border-[1px] dark:border-neutral-900 ease-in-out rounded-sm select-none hover:shadow-md hover:shadow-gray-500 shadow-md dark:hover:shadow-lg hover:-translate-y-[0.15rem] transition-all duration-150  lg:active:translate-y-4'
                 onClick={() => handleClick(project.urlCode)}
               >
                 {labels.buttons.sourceCode[language]}
               </Button>
-              <Button onClick={() => handleClick(project.urlDemo)}>
+              <Button
+                onClick={() => handleClick(project.urlDemo)}
+                className='border-gray-300/90   animate-ease-out bg-gradient-to-br text-gray-300 from-purple-600 to-violet-950  ease-in-out  rounded-sm select-none border-[1px] border-purple-950 shadow-md hover:shadow-lg hover:shadow-violet-500 dark:hover:shadow-violet-500 dark:hover:shadow-lg hover:-translate-y-[0.15rem] transition-all duration-150  lg:active:translate-y-3'
+              >
                 {labels.buttons.cta[language]}
               </Button>
             </div>
           </div>
           <div>
             <Tabs defaultValue='desktop' className='w-full'>
-              <TabsList className='grid w-full grid-cols-3 mb-4'>
-                <TabsTrigger value='desktop'>
+              <TabsList className='grid w-full grid-cols-3 mb-4 dark:border-neutral-700 dark:bg-neutral-800'>
+                <TabsTrigger
+                  value='desktop'
+                  className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+                >
                   <Monitor className='mr-2 h-4 w-4' /> Desktop
                 </TabsTrigger>
-                <TabsTrigger value='tablet'>
+                <TabsTrigger
+                  value='tablet'
+                  className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+                >
                   <Tablet className='mr-2 h-4 w-4' /> Tablet
                 </TabsTrigger>
-                <TabsTrigger value='mobile'>
+                <TabsTrigger
+                  value='mobile'
+                  className='data-[state=active]:dark:bg-neutral-700 data-[state=active]:text-gray-800 data-[state=active]:dark:text-white'
+                >
                   <Smartphone className='mr-2 h-4 w-4' /> Mobile
                 </TabsTrigger>
               </TabsList>
@@ -136,42 +148,43 @@ export default function Page({ params }: Props) {
           </div>
         )}
 
-        <div className='mb-12'>
-          <h2 className='text-2xl font-semibold mb-4'>Project Demo Video</h2>
-          <div className='aspect-w-16 aspect-h-9'>
-            <iframe
-              src='https://www.youtube.com/embed/dQw4w9WgXcQ'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
-              className='rounded-lg shadow-lg'
-            ></iframe>
+        {project.video && (
+          <div className='mb-12'>
+            <h2 className='text-2xl font-semibold mb-4'>
+              {labels.video[language]}
+            </h2>
+            <div className='aspect-w-16 aspect-h-9'>
+              <iframe
+                src={`https://www.youtube.com/embed/${project.video}`}
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+                className='rounded-lg shadow-xl shadow-stone-900 w-full h-[450px]'
+              ></iframe>
+            </div>
           </div>
-        </div>
+        )}
 
-        <div>
+        <section>
           <h2 className='text-2xl font-semibold mb-4'>Tech Stack</h2>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-            {[
-              { name: 'React', description: 'Frontend framework' },
-              { name: 'Node.js', description: 'Backend runtime' },
-              { name: 'MongoDB', description: 'Database' },
-              { name: 'WebSocket', description: 'Real-time communication' },
-              { name: 'Docker', description: 'Containerization' },
-              { name: 'Redux', description: 'State management' },
-              { name: 'Express', description: 'Backend framework' },
-              { name: 'Jest', description: 'Testing framework' },
-            ].map((tech) => (
-              <Card key={tech.name}>
+            {project.stack.map((tech, index) => (
+              <Card
+                key={tech.name}
+                className={`${
+                  index % 2 === 0 ? 'bg-gradient-to-bl' : 'bg-gradient-to-br'
+                } border-0 shadow-md dark:shadow-stone-900 shadow-gray-300`}
+              >
                 <CardContent className='p-4'>
                   <h3 className='font-semibold mb-1'>{tech.name}</h3>
                   <p className='text-sm text-muted-foreground'>
-                    {tech.description}
+                    {tech.description[language]}{' '}
+                    {/* `language` would be a variable storing the current language code */}
                   </p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </Container>
   );

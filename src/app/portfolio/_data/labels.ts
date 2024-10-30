@@ -16,6 +16,7 @@ interface Labels {
   };
   challengesAndSolutions: { [key: string]: string };
   imageGallery: { [key: string]: string };
+  video: { [key: string]: string };
 }
 
 export const labels: Labels = {
@@ -87,5 +88,10 @@ export const labels: Labels = {
     en: 'Image Gallery',
     es: 'Galería de Imágenes',
     de: 'Bildergalerie',
+  },
+  video: {
+    en: 'Project Video',
+    es: 'Vídeo del Proyecto',
+    de: 'Projektvideo',
   },
 };
