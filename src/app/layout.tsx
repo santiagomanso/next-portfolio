@@ -16,6 +16,21 @@ export const metadata: Metadata = {
   title:
     'Santiago Manso Castro | Web Developer | JavaScript | TypeScript | React | Next.js',
   description: 'Portfolio website',
+  openGraph: {
+    title: 'Santiago Manso Castro | Web Developer',
+    description:
+      'Portfolio website showcasing work in JavaScript, TypeScript, React, and Next.js',
+    url: 'https://santimanso.com', //  website URL
+    images: [
+      {
+        url: '/screenshots/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Santiago Manso Castro Portfolio OG Image',
+      },
+    ],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
